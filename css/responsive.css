@@ -10,6 +10,9 @@
     .text-bg h1 {
         font-size: 130px;
     }
+    .text-bg h2 {
+        font-size: 70px;
+    }
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -25,6 +28,9 @@
         font-size: 100px;
         line-height: 116px;
         padding-bottom: 11px;
+    }
+    .text-bg h2 {
+        font-size: 60px;
     }
     .text-bg span {
         font-size: 45px;
@@ -43,6 +49,9 @@
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+    .unselectable {
+        visibility: hidden;
+    }
     .navigation.navbar-dark .navbar-nav .nav-link {
         padding: 0 18px;
     }
@@ -54,6 +63,9 @@
         font-size: 75px;
         line-height: 110px;
         padding-bottom: 10px;
+    }
+    .text-bg h2 {
+        font-size: 45px;
     }
     .text-bg span {
         font-size: 34px;
@@ -97,10 +109,16 @@
 }
 
 @media (min-width: 576px) and (max-width: 767px) {
+    .unselectable {
+        visibility: hidden;
+    }    
     .text-bg h1 {
         font-size: 50px;
         line-height: 90px;
         padding-bottom: 20px;
+    }
+    .text-bg h2 {
+        font-size: 30px;
     }
     .text-bg {
         padding-left: 0px;
@@ -168,6 +186,10 @@
 }
 
 @media (max-width: 575px) {
+    .unselectable {
+        visibility: hidden;
+        display: none;
+    }    
     .header {
         padding: 30px 0px 15px 0px;
     }
@@ -179,6 +201,9 @@
         font-size: 35px;
         line-height: 70px;
         padding-bottom: 10px;
+    }
+    .text-bg h2 {
+        font-size: 20px;
     }
     .text-bg {
         padding-left: 0px;
