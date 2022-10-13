@@ -17,7 +17,7 @@ namespace Homework2._1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            int time = int.Parse(textBox1.Text);
             if (button1.Text == "Start")
             {
                 timer1.Start();
