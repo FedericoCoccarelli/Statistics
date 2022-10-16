@@ -1,3 +1,5 @@
+using System.Windows.Forms;
+
 namespace Homework2._1
 {
     public partial class Form1 : Form
@@ -6,75 +8,55 @@ namespace Homework2._1
         {
             InitializeComponent();
         }
-
-        int[] values = new int[10];
+        
         Random random = new Random();
         Random r = new Random();
-        int time;
-
-
+        int tempo;
         int ticks = 0;
-
         private void button1_Click(object sender, EventArgs e)
         {
-            int time = int.Parse(textBox1.Text);
+            if (int.TryParse(textBox1.Text, out time)) {}
+            else { time = 500; time = 500; }
+            progressBar1.Maximum = time;
+
             if (button1.Text == "Start")
             {
                 timer1.Start();
                 button1.Text = "Stop";
-                progressBar1.Value = 0;
+                progressBar1.Value = time;
+                ticks = 0;
 
             }
             else if (button1.Text == "Stop")
             {
                 timer1.Stop();
                 button1.Text = "Start";
-                progressBar1.Value = 100;
+                progressBar1.Value = 0;
             }
         }
-
+        private void button2_Click(object sender, EventArgs e)
+        {
+            for (int count = 1; count <= 9; count++)
+            {
+                RichTextBox currentBox = (RichTextBox)this.Controls.Find("richTextBox" + count, true)[0];
+                currentBox.BackColor = Color.White;
+            }
+        }
         private void timer1_Tick(object sender, EventArgs e)
         {
             richTextBox1.Clear();
-            int d = random.Next(1,10);
-            ticks++;
-            
+            int d = random.Next(1, 10);
 
-            if (d == 1)
-            {
-                this.richTextBox1.BackColor = Color.FromArgb(r.Next(0, 256), r.Next(0, 256), r.Next(0, 256));
+            if (progressBar1.Value >= 1) { progressBar1.Value -= 1; }
+            if (ticks > time) {
+                timer1.Stop();
+                this.button1.Text = "Start";
+                ticks = 0;
             }
-            if (d == 2)
+            if (ticks++ < time)
             {
-                this.richTextBox2.BackColor = Color.FromArgb(r.Next(0, 256), r.Next(0, 256), r.Next(0, 256));
-            }
-            if (d == 3)
-            {
-                this.richTextBox3.BackColor = Color.FromArgb(r.Next(0, 256), r.Next(0, 256), r.Next(0, 256));
-            }
-            if (d == 4)
-            {
-                this.richTextBox4.BackColor = Color.FromArgb(r.Next(0, 256), r.Next(0, 256), r.Next(0, 256));
-            }
-            if (d == 5)
-            {
-                this.richTextBox5.BackColor = Color.FromArgb(r.Next(0, 256), r.Next(0, 256), r.Next(0, 256));
-            }
-            if (d == 6)
-            {
-                this.richTextBox6.BackColor = Color.FromArgb(r.Next(0, 256), r.Next(0, 256), r.Next(0, 256));
-            }
-            if (d == 7)
-            {
-                this.richTextBox7.BackColor = Color.FromArgb(r.Next(0, 256), r.Next(0, 256), r.Next(0, 256));
-            }
-            if (d == 8)
-            {
-                this.richTextBox8.BackColor = Color.FromArgb(r.Next(0, 256), r.Next(0, 256), r.Next(0, 256));
-            }
-            if (d == 9)
-            {
-                this.richTextBox9.BackColor = Color.FromArgb(r.Next(0, 256), r.Next(0, 256), r.Next(0, 256));
+                RichTextBox currentBox = (RichTextBox)this.Controls.Find("richTextBox" + d, true)[0];
+                currentBox.BackColor = Color.FromArgb(r.Next(0, 256), r.Next(0, 256), r.Next(0, 256));   
             }
         }
     }
