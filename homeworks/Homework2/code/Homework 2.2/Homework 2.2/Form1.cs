@@ -12,19 +12,19 @@ namespace Homework_2._2
         {
             
 
-            var path = @"C:\Users\Corsair\OneDrive\Cybersecurity\Statistics\Statistics Homeworks\homeworks\Homework2\code\Homework 2.2";
+            var path = @"C:\Users\Corsair\OneDrive\Cybersecurity\Statistics\Statistics Homeworks\homeworks\Homework2\code\Homework 2.2\trees.csv";
             using (TextFieldParser parser = new TextFieldParser(@"C:\Users\Corsair\OneDrive\Cybersecurity\Statistics\Statistics Homeworks\homeworks\Homework2\code\Homework 2.2\trees.csv"))
             {
                 parser.TextFieldType = FieldType.Delimited;
                 parser.SetDelimiters(",");
-                while (!parser.EndOfData)
-                {
                     //Process row
-                    string[] fields = parser.ReadFields();
-                    foreach (string field in fields)
-                    {
-                        richTextBox1.Text = richTextBox1.Text+field[0].ToString();
-                    }
+                var strings = File.ReadAllLines(path);
+                foreach (var s in strings)
+                {
+                    var fields = s.Split(",");
+
+                    foreach (var field in fields)
+                        richTextBox1.Text = richTextBox1.Text + field;
                 }
             }
         }
