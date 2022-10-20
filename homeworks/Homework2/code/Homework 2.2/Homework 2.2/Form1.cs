@@ -17,17 +17,17 @@ namespace Homework_2._2
                 richTextBox1.Text = openFileDialog1.FileName;
             }
         }
-
+        bool hasheader = false;
         private void button1_Click(object sender, EventArgs e)
         {
             dataGridView1.Rows.Clear();
             dataGridView1.Columns.Clear();
             comboBox1.Items.Clear();
-            bool hasheader = false;
+            hasheader = false;
+
             string path = openFileDialog1.FileName;
             var strings = File.ReadAllLines(path);
             string[] row = strings[0].Split(",");
-
 
             if (!checkBox1.Checked)
             {
@@ -57,6 +57,28 @@ namespace Homework_2._2
                     dataGridView1.Rows.Add(fields);
             }
             this.dataGridView1.AllowUserToAddRows = false;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Dictionary<string, int> valuePairs = new Dictionary<string, int>();
+
+            dataGridView2.Rows.Clear();
+            dataGridView2.Columns.Clear();
+
+            for (int i = 0; i < dataGridView1.Rows.Count; i++)
+            {
+                string value = (string)dataGridView1.Rows[i].Cells[comboBox1.Text].Value;
+                if (!valuePairs.ContainsKey(value))
+                    valuePairs.Add(value, 1);
+                else
+                    valuePairs[value]++;
+            }
+
+            dataGridView2.Columns.Add(comboBox1.Text, comboBox1.Text);
+            dataGridView2.Columns.Add("Distribution", "Distribution");
+            foreach (var pair in valuePairs)
+                dataGridView2.Rows.Add(pair.Key, $"{pair.Value} / {dataGridView1.Rows.Count}");
         }
     }
 }
