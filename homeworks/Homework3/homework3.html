@@ -29,6 +29,7 @@
         <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script> <!-- for equations -->
      </head>
 </head>
 
@@ -169,13 +170,103 @@
                   <div class="titlepage">
                   <h2>1- illustrate the concept of conditional, joint, marginal(relative) frequency using simple bivariate distribution<h2>
                   <h3 style="text-align: justify; line-height: 2;">
-                     text
+                     A relative frequency is the ratio of the frequency of a particular event in a statistical experiment to the total frequency. 
+                     There are three types of relative frequency:
+                     <br>•	Joint Relative Frequency: The ratio that compares an intersection of qualitative data to the total frequency.
+                     <br>•	Marginal Relative Frequency: The ratio that compares a qualitative total to the total frequency.
+                     <br>•	Conditional Relative Frequency: A frequency that compares a specific joint relative frequency to a marginal relative frequency.
+                     <br><br>
+                     
+                     Joint Relative Frequency is the frequency of the intersection between two types of categorical data. In the table, the inner cells represent the joint relative frequency. To calculate the joint relative frequency,take the ratio between the joint frequency to the total frequency of the data. In statistics, this is used to compare and pair two distinct types of categorical data. Take for example in the table below:
+                        <br><br>
+                        
+                        <table class="wikitable" border="1">
+                        <thead> 
+                          <tr> 
+                           <th></th> 
+                           <th><span>English</span></th> 
+                           <th><span>Math</span></th> 
+                           <th><span>Science</span></th> 
+                           <th><span>Total</span></th> 
+                          </tr> 
+                         </thead> 
+                         <tbody> 
+                          <tr> 
+                           <td><span>Men</span></td> 
+                           <td>57</td> 
+                           <td>35</td> 
+                           <td>3 </td> 
+                           <td>95 </td>
+                          </tr> 
+                          <tr> 
+                           <td><span>Women</span></td> 
+                           <td>17</td> 
+                           <td>20</td> 
+                           <td>18</td> 
+                           <td>55 </td>
+                          </tr> 
+                          <tr> 
+                           <td><span>Total</span></td> 
+                           <td>74</td> 
+                           <td>55</td> 
+                           <td>21</td> 
+                           <td>150 </td>
+                          </tr> 
+                         </tbody> 
+                     </table>
+                     
+                     <br>
+                     
+                     In the table above, the inner cells represent the joint frequencies between a pair of categorical data points. In this situation, an example would be the frequency of men who struggled in Math class in high school,which according to the table would be 35 out of 150. To calculate the ratio, use the formula shown below: <br>
+                     $$Joint\;Relative\;Frequency=\frac{Joint\;Frequency}{Total\;Frequency}$$ <br>
+                     To help understanding, let's find the joint relative frequencies of : <br>
+                     (a)women who struggled in English in high school. <br>
+                     (b) men who struggled in science in high school. <br>
+
+                     $$(a)\;Joint\;Relative\;Frequency=\frac{Women\;and\;English}{Total\;Frequency}=\frac{17}{150}≈0.1133$$<br>
+                     $$(b)\;Joint\;Relative\;Frequency=\frac{Men\;and\;Science}{Total\;Frequency}=\frac{3}{150}≈0.02$$<br>
+                     
+                     According to the data, the relative frequency of women who struggled in English was 0.1133, or 11.33%. The relative frequency of men who struggled in Science was 0.02, or 2%. <br><br>
+                     
+                     Marginal Relative Frequency is the ratio between the frequency of a row total or column total to the total frequency of the data. It is commonly used to analyze general trends in one specific category of data. In the table above, the marginal frequencies can be found using the bottom or far-right "total" columns. To find the relative frequency of a category, divide the total for a specific category by the total number of participants in the study. For Example these are the relative frequency of:<br>
+                     (a) participants that were men. <br>
+                     (b) participants that chose Math as the subject they struggled with the most. <br>
+
+                     $$(a)\;Marginal\;Relative\;Frequency=\frac{Men}{Total\;Frequency} = \frac{95}{150}\approx 0.6333 $$ <br>
+                     $$(b)\;Marginal\;Relative\;Frequency=\frac{Math}{Total\;Frequency} = \frac{55}{150}\approx 0.3667 $$ <br>
+
+                     So, about 63.33% of the participants were men, and from the total population, about 36.67% struggled with math the most in their high school. <br><br>
+                     
+                     Conditional Relative Frequency is a ratio that compares a joint relative frequency with one of its marginal relative frequencies. In simpler words, it explains how many members of a marginal frequency have a particular trait. In the table used as an example, an example of a conditional frequency is the relative frequency of people who struggle in English, given that the person is a woman. In other words, it asks what ratio of women struggle in English. Use this formula to find the conditional relative frequency: <br>
+                     $$Conditional\;Relative\;Frequency=\frac{Frequency\;(A \cap B)}{Frequency\;B} $$ <br>
+                     Analysts use conditional relative frequency to determine if there is a trend involving two distinct variables of categorical data. Using the example of the table above, surveyors could use conditional relative frequency if there is an association between a person's gender and whether or not they prefer one subject over the other.
+                     Here an example: <br>
+                     Using the data in the table above, find the relative frequency of: <br>
+                     (a) men, given that they struggle in science.<br>
+                     (b) people who struggle in math, given that the person is a woman.<br>
+                     
+                     To find the first conditional relative frequency, it asks what part of people who struggle in science are men. By applying the formula:<br>
+                     $$(a)\;\frac{Frequency\;men \cap science}{Frequency\;Science} = \frac{3}{21}\approx 0.1429 $$<br>
+                     Using this reasoning makes solving the second conditional relative frequency that much easier:<br>
+                     $$(b)\;\frac{Frequency\;math \cap women}{Frequency\;Women} = \frac{20}{55}\approx 0.3636 $$<br>
+                     <br>
+                     <br>
+                     References:<br>
+                     <a href="https://study.com/learn/lesson/conditional-joint-marginal-relative-frequency-overview-comparison-examples.html#:~:text=Marginal%20relative%20frequency%20is%20the%20ratio%20of%20the%20sum%20of,total%20or%20a%20column%20total." style:"color: blue;">https://study.com/learn/lesson/conditional-joint-marginal-relative-frequency</a>
+
 
                   </h3>
-                  <h2>2- illustrate the concept of statistical indipendence and the resulting mathematical relationship between the above frequencies</2>
+                  <h2>2- Illustrate the concept of statistical indipendence and the resulting mathematical relationship between the above frequencies</2>
                   <h3 style="text-align: justify; line-height: 2;">
-                     text
+                     Independence is a fundamental notion in probability theory, as in statistics and the theory of stochastic processes. Two events are independent, statistically independent, or stochastically independent if, informally speaking, the occurrence of one does not affect the frequency of the other. <br>
+                     $$ \{indipendence\} ⇔ \{f(Xi|Yj)=f(Xi)\} ⇔ \{ f(Yj|Xi)=f(Yj)\} \quad \forall i,j $$ <br>
+
+
+
+                     
+
                   </h3>
+                  
                   </div>
                </div>
             </div>
@@ -233,12 +324,42 @@
                   <h2>1- A survey on ONLINE algorithms<h2>
                   <br>
                   <h3 style="text-align: justify; line-height: 2;">
-                     text
+                     In computer science, an online algorithm is one that can process its input piece-by-piece in a serial fashion, i.e., in the order that the input is fed to the algorithm, without having the    entire input available from the start. <br>
+
+                     In contrast, an offline algorithm is given the whole problem data from the beginning and is required to output an answer which solves the problem at hand. In operations research, the area in which  online algorithms are developed is called online optimization.<br>
+
+                     As an example, consider the sorting algorithms selection sort and insertion sort: selection sort repeatedly selects the minimum element from the unsorted remainder and places it at the front, which    requires access                  to the entire input; it is thus an offline algorithm. On the other hand, insertion sort considers one input element per iteration and produces a partial solution    without considering future elements. Thus insertion sort is an online algorithm.<br>
+
+                     Note that the final result of an insertion sort is optimum, i.e., a correctly sorted list. For many problems, online algorithms cannot match the performance of offline algorithms. If the ratio         between the performance of an online algorithm and an optimal offline algorithm is bounded, the online algorithm is called competitive.<br>
+
+                     Not every offline algorithm has an efficient online counterpart.<br> <br>
+
+                     References: <br>
+                     <a href="https://en.wikipedia.org/wiki/Online_algorithm#:~:text=In%20computer%20science%2C%20an%20online,input%20available%20from%20the%20start." style:"color: blue;">https://en.wikipedia.org/wiki/Online_algorithm</a>
 
                   <h3>
                   <h2>2- Describe Knuth recursion for the computation on the arithmentic mean(average)</h2>
                   <h3 style="text-align: justify; line-height: 2;">
-                     text
+                     To present large amounts of data, some indicators are often used that summarize their characteristics, one of these synthetic indicators is the average. Usually, the average relative to a given  character is calculated by adding all the available data, relative to that character, divided by the number of data:
+
+                     $$ \overline X _n = \frac {1} {n} \sum _{i=1}^n X_i $$ 
+
+                     The classic calculation of the average with the aid of software can lead to different types of errors, first of all the Catastrophic Cancellation, or the cancellation of significant figures.  Furthermore, for large amounts of data there may be anomalies and disadvantages also linked to high calculation and memory times. To overcome this type of problem, the American computer scientist    Donald Knuth proposed, through the following algebraic passages, a different algorithmic formulation for calculating the average:
+                     
+                     $$ \overline X _n = \frac {X_i+X_2+ ... +X_n} {n} = \frac {X_i+X_2+ ... +X_{n-1}} {n} + \frac {X_n}{n} =$$
+                     $$ = \frac {X_i+X_2+ ... +X_{n-1}} {n-1} \frac{n-1}{n} + \frac {X_n}{n} = \overline X _{n-1} \frac {n-1}{n} + \frac {X_n}{n}=$$
+                     $$ \overline X _{n-1} + \frac{1}{n} \left( X_n - \overline X _{n-1} \right) $$ 
+
+                     The algorithm presented (Knuth algorithm, or online algorithm) is incremental, i.e., the average at step n is obtained from the average at step n-1 and updated with the new observations. With this type of solution, it is therefore possible to build a stable algorithm without overflow problems. <br>
+
+                     This type of algorithm can also be applied for the calculation of other synthetic indices such as variance. <br>
+                     <br>
+                     <br>
+                     References:<br>
+                     <a href="https://statisticaapplicata800375216.wordpress.com/2020/03/25/algoritmo-di-knuth-per-il-calcolo-della-running-mean/" style:"color: blue;">https://statisticaapplicata.com</a>
+
+
+                  
 
                   <h3>
                   </div>
@@ -272,5 +393,8 @@
    
    });
 </script>
+
+
+
 
 </html>
