@@ -9,6 +9,8 @@ namespace Homework5._1
 {
     public partial class Form1 : Form
     {
+        string[][] jaggedArray;
+        string[] lines;
         public Form1()
         {
             InitializeComponent();
@@ -21,15 +23,13 @@ namespace Homework5._1
                 richTextBox1.Text = openFileDialog1.FileName;
             }
         }
-        bool hasheader = false;
         private void button1_Click(object sender, EventArgs e)
         {
             comboBox1.Items.Clear();
-            hasheader = false;
 
             string path = openFileDialog1.FileName;
-            string[] lines = File.ReadAllLines(path);
-            string[][] jaggedArray = new string[lines.Length][];
+            lines = File.ReadAllLines(path);
+            jaggedArray = new string[lines.Length][];
             string[] header = new string[lines[0].Split(',').Length];
 
             for (int i = 0; i < lines.Length; i++)
@@ -53,20 +53,24 @@ namespace Homework5._1
                     comboBox1.Items.Add(jaggedArray[0][i]);
                 }
             }
-
-            string result = string.Join(", ", jaggedArray[0]);
+            
+            /*string result = string.Join(", ", jaggedArray[0]);
             result += string.Join(", ", header);
-            richTextBox1.Text += result;
+            richTextBox1.Text += result;*/
 
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            /*Dictionary<string, int> valuePairs = new Dictionary<string, int>();
+            dataGridView2.Rows.Clear();
+            dataGridView2.Columns.Clear();
+            int index = Array.IndexOf(jaggedArray[0], comboBox1.Text);
+            richTextBox1.Text += index.ToString();
+            Dictionary<string, int> valuePairs = new Dictionary<string, int>();
 
-            for (int i = 0; i < dataGridView1.Rows.Count; i++)
+            for (int i = 0; i < lines.Length; i++)
             {
-                string value = (string)dataGridView1.Rows[i].Cells[comboBox1.Text].Value;
+                string value = (string)jaggedArray[i][index];
                 if (!valuePairs.ContainsKey(value))
                     valuePairs.Add(value, 1);
                 else
@@ -76,7 +80,10 @@ namespace Homework5._1
             dataGridView2.Columns.Add(comboBox1.Text, comboBox1.Text);
             dataGridView2.Columns.Add("Distribution", "Distribution");
             foreach (var pair in valuePairs)
-                dataGridView2.Rows.Add(pair.Key, $"{pair.Value} / {dataGridView1.Rows.Count}"); 
-        */} 
+                dataGridView2.Rows.Add(pair.Key, $"{pair.Value} / {lines.Length}");
+
+
+
+        }
     }
 }
