@@ -49,7 +49,7 @@ namespace Homework7._1
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(10, 11);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(79, 33);
             this.button1.TabIndex = 0;
@@ -60,28 +60,28 @@ namespace Homework7._1
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(10, 62);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1270, 501);
+            this.pictureBox1.Size = new System.Drawing.Size(1672, 501);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
             // trackBar1
             // 
             this.trackBar1.Location = new System.Drawing.Point(384, 16);
-            this.trackBar1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.trackBar1.Maximum = 200;
-            this.trackBar1.Minimum = 50;
+            this.trackBar1.Margin = new System.Windows.Forms.Padding(2);
+            this.trackBar1.Maximum = 100;
+            this.trackBar1.Minimum = 10;
             this.trackBar1.Name = "trackBar1";
             this.trackBar1.Size = new System.Drawing.Size(98, 45);
             this.trackBar1.TabIndex = 2;
-            this.trackBar1.Value = 50;
+            this.trackBar1.Value = 10;
             this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
             // 
             // trackBar2
             // 
             this.trackBar2.Location = new System.Drawing.Point(564, 16);
-            this.trackBar2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.trackBar2.Margin = new System.Windows.Forms.Padding(2);
             this.trackBar2.Maximum = 50;
             this.trackBar2.Minimum = 1;
             this.trackBar2.Name = "trackBar2";
@@ -123,7 +123,7 @@ namespace Homework7._1
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(126, 11);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(79, 33);
             this.button2.TabIndex = 8;
@@ -134,7 +134,7 @@ namespace Homework7._1
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(250, 11);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(79, 33);
             this.button3.TabIndex = 9;
@@ -145,7 +145,7 @@ namespace Homework7._1
             // trackBar3
             // 
             this.trackBar3.Location = new System.Drawing.Point(745, 17);
-            this.trackBar3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.trackBar3.Margin = new System.Windows.Forms.Padding(2);
             this.trackBar3.Minimum = 1;
             this.trackBar3.Name = "trackBar3";
             this.trackBar3.Size = new System.Drawing.Size(112, 45);
@@ -157,7 +157,7 @@ namespace Homework7._1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1155, 613);
+            this.ClientSize = new System.Drawing.Size(1705, 613);
             this.Controls.Add(this.trackBar3);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -168,7 +168,7 @@ namespace Homework7._1
             this.Controls.Add(this.trackBar1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

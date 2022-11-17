@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Reflection.Emit;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
@@ -75,15 +76,19 @@ namespace Homework7._1
             double minY = 0;
             double maxY = (double)TrialsCount;
 
-            interarrivals = new int[TrialsCount];
+            interarrivals = new int[TrialsCount+1];
 
-            Rectangle r = new Rectangle(20, 20, b.Width - 300, b.Height - 40);
+            Rectangle r = new Rectangle(20, 20, b.Width - 650, b.Height - 40);
             g.FillRectangle(Brushes.White, r);
             g.DrawRectangle(Pens.Black, r);
 
-            Rectangle r2 = new Rectangle(r.Right + 10, 20, 260, b.Height - 40);
+            Rectangle r2 = new Rectangle(r.Right + 10, 20, 200, b.Height - 40);
             g.FillRectangle(Brushes.White, r2);
             g.DrawRectangle(Pens.Black, r2);
+
+            Rectangle r3 = new Rectangle(r2.Right + 10, 20, 400, b.Height - 40);
+            g.FillRectangle(Brushes.White, r3);
+            g.DrawRectangle(Pens.Black, r3);
 
             Array.Clear(results, 0, results.Length);
 
@@ -91,14 +96,19 @@ namespace Homework7._1
             {
                 lastX = r.Left;
                 lastY = r.Bottom;
+                int lastSuccess=0;
                 double Y = 0;
                 PenTrajectory.Color = Color.FromArgb(random.Next(0, 256), random.Next(0, 256), random.Next(0, 256));
                 PenTrajectory.Width = 2;
-                for (int X = 0; X < TrialsCount; X++)
+                for (int X = 1; X <= TrialsCount; X++)
                 {
                     random.NextDouble();
 
-                    if (random.NextDouble() < successProbability) Y = Y + 1;
+                    if (random.NextDouble() < successProbability) { 
+                        Y = Y + 1; 
+                        interarrivals[X-lastSuccess] += 1 ;
+                        lastSuccess = X;
+                    }
 
                     int xCord = linearTransformX(X, minX, maxX, r.Left, r.Width);
                     int yCord = linearTransformY(Y, minY, maxY, r.Top, r.Height);
@@ -106,12 +116,13 @@ namespace Homework7._1
                     g.DrawLine(PenTrajectory, lastX, lastY, xCord, yCord);
                     lastX = xCord;
                     lastY = yCord;
-                    if (X == TrialsCount - 1)
+                    if (X == TrialsCount)
                     {
                         results[lastY] += 20; //histogram bar increases by 20px 
                         g.DrawLine(PenHistogram, r2.Left, lastY, r2.Left + results[lastY], lastY);
                         pictureBox1.Image = b;
                     }
+                    g.DrawLine(PenHistogram, r3.Left + X*(int)((double)(r3.Width)/(double)(TrialsCount)), b.Height-20, r3.Left + X * (int)((double)(r3.Width) / (double)(TrialsCount)), b.Height- interarrivals[X]-20);
                     pictureBox1.Image = b;
                 }
             }
@@ -152,7 +163,7 @@ namespace Homework7._1
                 PenTrajectory.Color = Color.FromArgb(random.Next(0, 256), random.Next(0, 256), random.Next(0, 256));
                 PenTrajectory.Width = 2;
 
-                for (int X = 0; X < TrialsCount; X++)
+                for (int X = 1; X <= TrialsCount; X++)
                 {
                     random.NextDouble();
 
@@ -166,7 +177,7 @@ namespace Homework7._1
                     g.DrawLine(PenTrajectory, lastX, lastY, xCord, yCord);
                     lastX = xCord;
                     lastY = yCord;
-                    if (X == TrialsCount - 1)
+                    if (X == TrialsCount)
                     {
                         results[lastY] += 20;
                         g.DrawLine(PenHistogram, r2.Left, lastY, r2.Left + results[lastY], lastY);
@@ -210,7 +221,7 @@ namespace Homework7._1
                 PenTrajectory.Color = Color.FromArgb(random.Next(0, 256), random.Next(0, 256), random.Next(0, 256));
                 PenTrajectory.Width = 2;
 
-                for (int X = 0; X < TrialsCount; X++)
+                for (int X = 1; X <= TrialsCount; X++)
                 {
                     random.NextDouble();
 
@@ -223,7 +234,7 @@ namespace Homework7._1
                     g.DrawLine(PenTrajectory, lastX, lastY, xCord, yCord);
                     lastX = xCord;
                     lastY = yCord;
-                    if (X == TrialsCount - 1)
+                    if (X == TrialsCount)
                     {
                         results[lastY] += 20;
                         g.DrawLine(PenHistogram, r2.Left, lastY, r2.Left + results[lastY], lastY);

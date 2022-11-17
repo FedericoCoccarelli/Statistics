@@ -86,7 +86,7 @@ namespace Homework4._1
                 double Y = 0;
                 PenTrajectory.Color = Color.FromArgb(random.Next(0, 256), random.Next(0, 256), random.Next(0, 256));
                 PenTrajectory.Width = 2;
-                for (int X = 0; X < TrialsCount; X++)
+                for (int X = 1; X <= TrialsCount; X++)
                 {
                     random.NextDouble();
 
@@ -98,7 +98,7 @@ namespace Homework4._1
                     g.DrawLine(PenTrajectory, lastX, lastY, xCord, yCord);
                     lastX = xCord;
                     lastY = yCord;
-                    if (X == TrialsCount - 1)
+                    if (X == TrialsCount)
                     {
                         results[lastY] += 20; //histogram bar increases by 20px 
                         g.DrawLine(PenHistogram, r2.Left, lastY, r2.Left + results[lastY], lastY);
@@ -145,7 +145,7 @@ namespace Homework4._1
                 PenTrajectory.Color = Color.FromArgb(random.Next(0, 256), random.Next(0, 256), random.Next(0, 256));
                 PenTrajectory.Width = 2;
 
-                for (int X = 0; X < TrialsCount; X++)
+                for (int X = 1; X <= TrialsCount; X++)
                 {
                     random.NextDouble();
 
@@ -159,7 +159,7 @@ namespace Homework4._1
                     g.DrawLine(PenTrajectory, lastX, lastY, xCord, yCord);
                     lastX = xCord;
                     lastY = yCord;
-                    if (X == TrialsCount - 1)
+                    if (X == TrialsCount)
                     {
                         results[lastY] += 20;
                         g.DrawLine(PenHistogram, r2.Left, lastY, r2.Left + results[lastY], lastY);
@@ -202,7 +202,7 @@ namespace Homework4._1
                 PenTrajectory.Color = Color.FromArgb(random.Next(0, 256), random.Next(0, 256), random.Next(0, 256));
                 PenTrajectory.Width = 2;
 
-                for (int X = 0; X < TrialsCount; X++)
+                for (int X = 1; X <= TrialsCount; X++)
                 {
                     random.NextDouble();
 
@@ -215,7 +215,7 @@ namespace Homework4._1
                     g.DrawLine(PenTrajectory, lastX, lastY, xCord, yCord);
                     lastX = xCord;
                     lastY = yCord;
-                    if (X == TrialsCount - 1)
+                    if (X == TrialsCount)
                     {
                         results[lastY] += 20;
                         g.DrawLine(PenHistogram, r2.Left, lastY, r2.Left + results[lastY], lastY);
