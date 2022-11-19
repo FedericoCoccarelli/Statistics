@@ -6,11 +6,12 @@ using System.Drawing;
 using System.Linq;
 using System.Reflection.Emit;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
-namespace Homework4._1
+namespace Homework7._1
 {
     public partial class Form1 : Form
     {
@@ -23,11 +24,11 @@ namespace Homework4._1
         int lastX;
         int lastY;
         int[] results = new int[1000];
+        int[] interarrivals;
 
         public Form1()
         {
             InitializeComponent();
-            comboBox1.Text = "0,5";
             b = new Bitmap(pictureBox1.Width, pictureBox1.Height);
             g = Graphics.FromImage(b);
             g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
@@ -53,15 +54,21 @@ namespace Homework4._1
         private void trackBar2_Scroll(object sender, EventArgs e)
         {
             label2.Text = "Number of trajectories: " + trackBar2.Value.ToString();
+            trackBar3.Maximum = trackBar2.Value;
+            trackBar3.Value = 1;
+            label3.Text = "Value of λ: 1";
+        }
+
+        private void trackBar3_Scroll(object sender, EventArgs e)
+        {
+            label3.Text = "Value of λ: " + trackBar3.Value.ToString();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             g.Clear(Color.White);
             int TrialsCount = trackBar1.Value;
-            double successProbability;
-            Boolean success = Double.TryParse(comboBox1.Text, out successProbability);
-            if (!success || (success & (successProbability > 1 || successProbability < 0))) successProbability = 0.5;
+            double successProbability=(double)((double)trackBar3.Value/ (double)trackBar2.Value);
             int TrajectoryNumber = trackBar2.Value;
 
             double minX = 0;
@@ -69,13 +76,19 @@ namespace Homework4._1
             double minY = 0;
             double maxY = (double)TrialsCount;
 
-            Rectangle r = new Rectangle(20, 20, b.Width - 300, b.Height - 40);
+            interarrivals = new int[TrialsCount+1];
+
+            Rectangle r = new Rectangle(20, 20, b.Width - 650, b.Height - 40);
             g.FillRectangle(Brushes.White, r);
             g.DrawRectangle(Pens.Black, r);
 
-            Rectangle r2 = new Rectangle(r.Right + 10, 20, 260, b.Height - 40);
+            Rectangle r2 = new Rectangle(r.Right + 10, 20, 200, b.Height - 40);
             g.FillRectangle(Brushes.White, r2);
             g.DrawRectangle(Pens.Black, r2);
+
+            Rectangle r3 = new Rectangle(r2.Right + 10, 20, 400, b.Height - 40);
+            g.FillRectangle(Brushes.White, r3);
+            g.DrawRectangle(Pens.Black, r3);
 
             Array.Clear(results, 0, results.Length);
 
@@ -83,6 +96,7 @@ namespace Homework4._1
             {
                 lastX = r.Left;
                 lastY = r.Bottom;
+                int lastSuccess=0;
                 double Y = 0;
                 PenTrajectory.Color = Color.FromArgb(random.Next(0, 256), random.Next(0, 256), random.Next(0, 256));
                 PenTrajectory.Width = 2;
@@ -90,7 +104,11 @@ namespace Homework4._1
                 {
                     random.NextDouble();
 
-                    if (random.NextDouble() < successProbability) Y = Y + 1;
+                    if (random.NextDouble() < successProbability) { 
+                        Y = Y + 1; 
+                        interarrivals[X-lastSuccess] += 1 ;
+                        lastSuccess = X;
+                    }
 
                     int xCord = linearTransformX(X, minX, maxX, r.Left, r.Width);
                     int yCord = linearTransformY(Y, minY, maxY, r.Top, r.Height);
@@ -104,6 +122,7 @@ namespace Homework4._1
                         g.DrawLine(PenHistogram, r2.Left, lastY, r2.Left + results[lastY], lastY);
                         pictureBox1.Image = b;
                     }
+                    g.DrawLine(PenHistogram, r3.Left + X*(int)((double)(r3.Width)/(double)(TrialsCount)), b.Height-20, r3.Left + X * (int)((double)(r3.Width) / (double)(TrialsCount)), b.Height- interarrivals[X]-20);
                     pictureBox1.Image = b;
                 }
             }
@@ -113,9 +132,7 @@ namespace Homework4._1
         {
             g.Clear(Color.White);
             int TrialsCount = trackBar1.Value;
-            double successProbability;
-            Boolean success = Double.TryParse(comboBox1.Text, out successProbability);
-            if (!success || (success & (successProbability > 1 || successProbability < 0))) successProbability = 0.5;
+            double successProbability = (double)((double)trackBar3.Value / (double)trackBar2.Value);
             int TrajectoryNumber = trackBar2.Value;
 
             double minX = 0;
@@ -123,6 +140,7 @@ namespace Homework4._1
             double minY = 0;
             double maxY = 1;
 
+            interarrivals = new int[TrialsCount];
 
             Rectangle r = new Rectangle(20, 20, b.Width - 300, b.Height - 40);
             g.FillRectangle(Brushes.White, r);
@@ -174,15 +192,16 @@ namespace Homework4._1
         {
             g.Clear(Color.White);
             int TrialsCount = trackBar1.Value;
-            double successProbability;
-            Boolean success = Double.TryParse(comboBox1.Text, out successProbability);
-            if (!success || (success & (successProbability > 1 || successProbability < 0))) successProbability = 0.5;
+            double successProbability = (double)((double)trackBar3.Value / (double)trackBar2.Value);
             int TrajectoryNumber = trackBar2.Value;
 
             double minX = 0;
             double maxX = (double)TrialsCount;
             double minY = 0;
             double maxY = ((double)TrialsCount) * successProbability;
+
+            interarrivals = new int[TrialsCount];
+
 
             Rectangle r = new Rectangle(20, 20, b.Width - 300, b.Height - 40);
             g.FillRectangle(Brushes.White, r);
