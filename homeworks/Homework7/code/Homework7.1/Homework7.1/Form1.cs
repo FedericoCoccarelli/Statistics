@@ -24,7 +24,10 @@ namespace Homework7._1
         int lastX;
         int lastY;
         int[] results = new int[1000];
+        int[] resultsCopy = new int[1000];
         int[] interarrivals;
+        int[] interarrivalsCopy;
+        Rectangle r, r2, r3;
 
         public Form1()
         {
@@ -33,7 +36,6 @@ namespace Homework7._1
             g = Graphics.FromImage(b);
             g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             g.Clear(Color.White);
-
         }
 
         public int linearTransformX(double X, double minX, double maxX, int Left, int W)
@@ -55,8 +57,12 @@ namespace Homework7._1
         {
             label2.Text = "Number of trajectories: " + trackBar2.Value.ToString();
             trackBar3.Maximum = trackBar2.Value;
-            trackBar3.Value = 1;
-            label3.Text = "Value of λ: 1";
+            if (trackBar2.Value<=trackBar3.Value)
+            {
+                trackBar3.Value = trackBar2.Value;
+                label3.Text = "Value of λ: " + trackBar3.Value.ToString();
+            }
+            
         }
 
         private void trackBar3_Scroll(object sender, EventArgs e)
@@ -77,16 +83,17 @@ namespace Homework7._1
             double maxY = (double)TrialsCount;
 
             interarrivals = new int[TrialsCount+1];
+            interarrivalsCopy = new int[TrialsCount + 1];
 
-            Rectangle r = new Rectangle(20, 20, b.Width - 650, b.Height - 40);
+            r = new Rectangle(20, 20, b.Width - 650, b.Height - 40);
             g.FillRectangle(Brushes.White, r);
             g.DrawRectangle(Pens.Black, r);
 
-            Rectangle r2 = new Rectangle(r.Right + 10, 20, 200, b.Height - 40);
+            r2 = new Rectangle(r.Right + 10, 20, 200, b.Height - 40);
             g.FillRectangle(Brushes.White, r2);
             g.DrawRectangle(Pens.Black, r2);
 
-            Rectangle r3 = new Rectangle(r2.Right + 10, 20, 400, b.Height - 40);
+            r3 = new Rectangle(r2.Right + 10, 20, 400, b.Height - 40);
             g.FillRectangle(Brushes.White, r3);
             g.DrawRectangle(Pens.Black, r3);
 
@@ -100,31 +107,39 @@ namespace Homework7._1
                 double Y = 0;
                 PenTrajectory.Color = Color.FromArgb(random.Next(0, 256), random.Next(0, 256), random.Next(0, 256));
                 PenTrajectory.Width = 2;
+                double space = (double)(r3.Width) / (double)(TrialsCount);
                 for (int X = 1; X <= TrialsCount; X++)
                 {
                     random.NextDouble();
 
                     if (random.NextDouble() < successProbability) { 
-                        Y = Y + 1; 
-                        interarrivals[X-lastSuccess] += 1 ;
+                        Y = Y + 1;
+                        interarrivals[X - lastSuccess] += 1;
                         lastSuccess = X;
                     }
+                    g.DrawLine(PenHistogram, r3.Left + X * (int)(space), b.Height - 20, r3.Left + X * (int)(space), b.Height - interarrivals[X] - 20);
 
                     int xCord = linearTransformX(X, minX, maxX, r.Left, r.Width);
                     int yCord = linearTransformY(Y, minY, maxY, r.Top, r.Height);
+
 
                     g.DrawLine(PenTrajectory, lastX, lastY, xCord, yCord);
                     lastX = xCord;
                     lastY = yCord;
                     if (X == TrialsCount)
                     {
-                        results[lastY] += 20; //histogram bar increases by 20px 
+                        results[lastY] += 1; //histogram bar increases by 1px
                         g.DrawLine(PenHistogram, r2.Left, lastY, r2.Left + results[lastY], lastY);
-                        pictureBox1.Image = b;
                     }
-                    g.DrawLine(PenHistogram, r3.Left + X*(int)((double)(r3.Width)/(double)(TrialsCount)), b.Height-20, r3.Left + X * (int)((double)(r3.Width) / (double)(TrialsCount)), b.Height- interarrivals[X]-20);
-                    pictureBox1.Image = b;
+
                 }
+                richTextBox1.Text = "";
+                for(int i=0;i<interarrivalsCopy.Length;i++)
+                {
+                    if (interarrivals[i]>0) { richTextBox1.Text+=interarrivals[i].ToString()+","; }
+                }
+                pictureBox1.Image = b;
+                pictureBox1.Update();
             }
         }
 
@@ -140,15 +155,21 @@ namespace Homework7._1
             double minY = 0;
             double maxY = 1;
 
-            interarrivals = new int[TrialsCount];
+            interarrivals = new int[TrialsCount+1];
+            int lastSuccess = 0;
+            double space = (double)(r3.Width) / (double)(TrialsCount);
 
-            Rectangle r = new Rectangle(20, 20, b.Width - 300, b.Height - 40);
+            r = new Rectangle(20, 20, b.Width - 650, b.Height - 40);
             g.FillRectangle(Brushes.White, r);
             g.DrawRectangle(Pens.Black, r);
 
-            Rectangle r2 = new Rectangle(r.Right + 10, 20, 260, b.Height - 40);
+            r2 = new Rectangle(r.Right + 10, 20, 200, b.Height - 40);
             g.FillRectangle(Brushes.White, r2);
             g.DrawRectangle(Pens.Black, r2);
+
+            r3 = new Rectangle(r2.Right + 10, 20, 400, b.Height - 40);
+            g.FillRectangle(Brushes.White, r3);
+            g.DrawRectangle(Pens.Black, r3);
 
             int lastX;
             int lastY;
@@ -167,7 +188,12 @@ namespace Homework7._1
                 {
                     random.NextDouble();
 
-                    if (random.NextDouble() < successProbability) Yt = Yt + 1;
+                    if (random.NextDouble() < successProbability)
+                    {
+                        Yt = Yt + 1;
+                        interarrivals[X - lastSuccess] += 1;
+                        lastSuccess = X;
+                    }
 
                     double Y = Yt / (X + 1);
 
@@ -200,16 +226,22 @@ namespace Homework7._1
             double minY = 0;
             double maxY = ((double)TrialsCount) * successProbability;
 
-            interarrivals = new int[TrialsCount];
+            interarrivals = new int[TrialsCount+1];
+            int lastSuccess = 0;
+            double space = (double)(r3.Width) / (double)(TrialsCount);
 
 
-            Rectangle r = new Rectangle(20, 20, b.Width - 300, b.Height - 40);
+            r = new Rectangle(20, 20, b.Width - 650, b.Height - 40);
             g.FillRectangle(Brushes.White, r);
             g.DrawRectangle(Pens.Black, r);
 
-            Rectangle r2 = new Rectangle(r.Right + 10, 20, 260, b.Height - 40);
+            r2 = new Rectangle(r.Right + 10, 20, 200, b.Height - 40);
             g.FillRectangle(Brushes.White, r2);
             g.DrawRectangle(Pens.Black, r2);
+
+            r3 = new Rectangle(r2.Right + 10, 20, 400, b.Height - 40);
+            g.FillRectangle(Brushes.White, r3);
+            g.DrawRectangle(Pens.Black, r3);
 
             Array.Clear(results, 0, results.Length);
 
@@ -225,9 +257,14 @@ namespace Homework7._1
                 {
                     random.NextDouble();
 
-                    if (random.NextDouble() < successProbability) Yt = Yt + 1;
+                    if (random.NextDouble() < successProbability)
+                    {
+                        Yt = Yt + 1;
+                        interarrivals[X - lastSuccess] += 1;
+                        lastSuccess = X;
+                    }
 
-                    double Y = 4 * Yt / Math.Sqrt(X + 1); //multiplied by 4 because otherwise the graph is flat
+                    double Y = Yt / Math.Sqrt(X + 1); //multiplied by 4 because otherwise the graph is flat
                     int xCord = linearTransformX(X, minX, maxX, r.Left, r.Width);
                     int yCord = linearTransformY(Y, minY, maxY, r.Top, r.Height);
 

@@ -164,9 +164,12 @@ namespace Homework4._1
                         results[lastY] += 20;
                         g.DrawLine(PenHistogram, r2.Left, lastY, r2.Left + results[lastY], lastY);
                         pictureBox1.Image = b;
+                        pictureBox1.Update();
                     }
                     pictureBox1.Image = b;
+                    pictureBox1.Update();
                 }
+
             }
         }
 
