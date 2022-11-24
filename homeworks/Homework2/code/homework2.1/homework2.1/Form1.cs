@@ -36,6 +36,12 @@ namespace Homework2._1
         }
         private void button2_Click(object sender, EventArgs e)
         {
+            if (button1.Text == "Stop")
+            {
+                timer1.Stop();
+                button1.Text = "Start";
+                progressBar1.Value = 0;
+            }
             for (int count = 1; count <= 9; count++)
             {
                 RichTextBox currentBox = (RichTextBox)this.Controls.Find("richTextBox" + count, true)[0];

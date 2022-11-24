@@ -93,7 +93,7 @@ namespace Homework7._1
             g.FillRectangle(Brushes.White, r2);
             g.DrawRectangle(Pens.Black, r2);
 
-            r3 = new Rectangle(r2.Right + 10, 20, 400, b.Height - 40);
+            r3 = new Rectangle(r2.Right + 10, 20, 390, b.Height - 40);
             g.FillRectangle(Brushes.White, r3);
             g.DrawRectangle(Pens.Black, r3);
 
@@ -128,157 +128,13 @@ namespace Homework7._1
                     lastY = yCord;
                     if (X == TrialsCount)
                     {
-                        results[lastY] += 1; //histogram bar increases by 1px
+                        results[lastY] += 3; //histogram bar increases by 1px
                         g.DrawLine(PenHistogram, r2.Left, lastY, r2.Left + results[lastY], lastY);
                     }
 
-                }
-                richTextBox1.Text = "";
-                for(int i=0;i<interarrivalsCopy.Length;i++)
-                {
-                    if (interarrivals[i]>0) { richTextBox1.Text+=interarrivals[i].ToString()+","; }
                 }
                 pictureBox1.Image = b;
                 pictureBox1.Update();
-            }
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            g.Clear(Color.White);
-            int TrialsCount = trackBar1.Value;
-            double successProbability = (double)((double)trackBar3.Value / (double)trackBar2.Value);
-            int TrajectoryNumber = trackBar2.Value;
-
-            double minX = 0;
-            double maxX = (double)TrialsCount;
-            double minY = 0;
-            double maxY = 1;
-
-            interarrivals = new int[TrialsCount+1];
-            int lastSuccess = 0;
-            double space = (double)(r3.Width) / (double)(TrialsCount);
-
-            r = new Rectangle(20, 20, b.Width - 650, b.Height - 40);
-            g.FillRectangle(Brushes.White, r);
-            g.DrawRectangle(Pens.Black, r);
-
-            r2 = new Rectangle(r.Right + 10, 20, 200, b.Height - 40);
-            g.FillRectangle(Brushes.White, r2);
-            g.DrawRectangle(Pens.Black, r2);
-
-            r3 = new Rectangle(r2.Right + 10, 20, 400, b.Height - 40);
-            g.FillRectangle(Brushes.White, r3);
-            g.DrawRectangle(Pens.Black, r3);
-
-            int lastX;
-            int lastY;
-            int[] results = new int[1000];
-            Array.Clear(results, 0, results.Length);
-
-            for (int t = 0; t < TrajectoryNumber; t++)
-            {
-                lastX = r.Left;
-                lastY = r.Bottom;
-                double Yt = 0;
-                PenTrajectory.Color = Color.FromArgb(random.Next(0, 256), random.Next(0, 256), random.Next(0, 256));
-                PenTrajectory.Width = 2;
-
-                for (int X = 1; X <= TrialsCount; X++)
-                {
-                    random.NextDouble();
-
-                    if (random.NextDouble() < successProbability)
-                    {
-                        Yt = Yt + 1;
-                        interarrivals[X - lastSuccess] += 1;
-                        lastSuccess = X;
-                    }
-
-                    double Y = Yt / (X + 1);
-
-                    int xCord = linearTransformX(X, minX, maxX, r.Left, r.Width);
-                    int yCord = linearTransformY(Y, minY, maxY, r.Top, r.Height);
-
-                    g.DrawLine(PenTrajectory, lastX, lastY, xCord, yCord);
-                    lastX = xCord;
-                    lastY = yCord;
-                    if (X == TrialsCount)
-                    {
-                        results[lastY] += 20;
-                        g.DrawLine(PenHistogram, r2.Left, lastY, r2.Left + results[lastY], lastY);
-                        pictureBox1.Image = b;
-                    }
-                    pictureBox1.Image = b;
-                }
-            }
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            g.Clear(Color.White);
-            int TrialsCount = trackBar1.Value;
-            double successProbability = (double)((double)trackBar3.Value / (double)trackBar2.Value);
-            int TrajectoryNumber = trackBar2.Value;
-
-            double minX = 0;
-            double maxX = (double)TrialsCount;
-            double minY = 0;
-            double maxY = ((double)TrialsCount) * successProbability;
-
-            interarrivals = new int[TrialsCount+1];
-            int lastSuccess = 0;
-            double space = (double)(r3.Width) / (double)(TrialsCount);
-
-
-            r = new Rectangle(20, 20, b.Width - 650, b.Height - 40);
-            g.FillRectangle(Brushes.White, r);
-            g.DrawRectangle(Pens.Black, r);
-
-            r2 = new Rectangle(r.Right + 10, 20, 200, b.Height - 40);
-            g.FillRectangle(Brushes.White, r2);
-            g.DrawRectangle(Pens.Black, r2);
-
-            r3 = new Rectangle(r2.Right + 10, 20, 400, b.Height - 40);
-            g.FillRectangle(Brushes.White, r3);
-            g.DrawRectangle(Pens.Black, r3);
-
-            Array.Clear(results, 0, results.Length);
-
-            for (int t = 0; t < TrajectoryNumber; t++)
-            {
-                lastX = r.Left;
-                lastY = r.Bottom;
-                double Yt = 0;
-                PenTrajectory.Color = Color.FromArgb(random.Next(0, 256), random.Next(0, 256), random.Next(0, 256));
-                PenTrajectory.Width = 2;
-
-                for (int X = 1; X <= TrialsCount; X++)
-                {
-                    random.NextDouble();
-
-                    if (random.NextDouble() < successProbability)
-                    {
-                        Yt = Yt + 1;
-                        interarrivals[X - lastSuccess] += 1;
-                        lastSuccess = X;
-                    }
-
-                    double Y = Yt / Math.Sqrt(X + 1); //multiplied by 4 because otherwise the graph is flat
-                    int xCord = linearTransformX(X, minX, maxX, r.Left, r.Width);
-                    int yCord = linearTransformY(Y, minY, maxY, r.Top, r.Height);
-
-                    g.DrawLine(PenTrajectory, lastX, lastY, xCord, yCord);
-                    lastX = xCord;
-                    lastY = yCord;
-                    if (X == TrialsCount)
-                    {
-                        results[lastY] += 20;
-                        g.DrawLine(PenHistogram, r2.Left, lastY, r2.Left + results[lastY], lastY);
-                        pictureBox1.Image = b;
-                    }
-                    pictureBox1.Image = b;
-                }
             }
         }
     }
