@@ -21,7 +21,6 @@ C:\Users\feder\Desktop\Statistics\homeworks\Homework5\code\Homework5.1\Homework5
 C:\Users\feder\Desktop\Statistics\homeworks\Homework5\code\Homework5.1\Homework5.1\bin\Debug\net6.0-windows\Homework5.1.dll
 C:\Users\feder\Desktop\Statistics\homeworks\Homework5\code\Homework5.1\Homework5.1\bin\Debug\net6.0-windows\Homework5.1.pdb
 C:\Users\feder\Desktop\Statistics\homeworks\Homework5\code\Homework5.1\Homework5.1\obj\Debug\net6.0-windows\Homework5.1.csproj.AssemblyReference.cache
-C:\Users\feder\Desktop\Statistics\homeworks\Homework5\code\Homework5.1\Homework5.1\obj\Debug\net6.0-windows\Homework5._1.Form1.resources
 C:\Users\feder\Desktop\Statistics\homeworks\Homework5\code\Homework5.1\Homework5.1\obj\Debug\net6.0-windows\Homework5.1.csproj.GenerateResource.cache
 C:\Users\feder\Desktop\Statistics\homeworks\Homework5\code\Homework5.1\Homework5.1\obj\Debug\net6.0-windows\Homework5.1.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\feder\Desktop\Statistics\homeworks\Homework5\code\Homework5.1\Homework5.1\obj\Debug\net6.0-windows\Homework5.1.AssemblyInfoInputs.cache
@@ -32,3 +31,4 @@ C:\Users\feder\Desktop\Statistics\homeworks\Homework5\code\Homework5.1\Homework5
 C:\Users\feder\Desktop\Statistics\homeworks\Homework5\code\Homework5.1\Homework5.1\obj\Debug\net6.0-windows\Homework5.1.pdb
 C:\Users\feder\Desktop\Statistics\homeworks\Homework5\code\Homework5.1\Homework5.1\obj\Debug\net6.0-windows\Homework5.1.genruntimeconfig.cache
 C:\Users\feder\Desktop\Statistics\homeworks\Homework5\code\Homework5.1\Homework5.1\obj\Debug\net6.0-windows\ref\Homework5.1.dll
+C:\Users\feder\Desktop\Statistics\homeworks\Homework5\code\Homework5.1\Homework5.1\obj\Debug\net6.0-windows\Homework5._1.StringExt.resources

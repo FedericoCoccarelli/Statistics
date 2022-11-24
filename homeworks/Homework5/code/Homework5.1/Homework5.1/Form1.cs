@@ -96,7 +96,7 @@ namespace Homework5._1
                 comboBox1.Text = jaggedArray[0][0];
             }
             r = new Rectangle(1, 1, b.Width*2/3 - 3, b.Height - 2);
-            r2 = new Rectangle(b.Width*2/3 + 3 , 1, b.Width - 2, b.Height - 2);
+            r2 = new Rectangle(b.Width*2/3 + 3 , 1, 425, b.Height - 2);
             pictureBox1.Image = b;
             button3.Enabled = true;
         }
@@ -129,7 +129,7 @@ namespace Homework5._1
             g.FillRectangle(Brushes.White, r2);
             g.DrawRectangle(Pens.Black, r2);
             double space = (double)(r.Width - 5) / (double)(valuePairs.Count);
-            double space2 = (double)(r2.Height - 5) / (double)(valuePairs.Count);
+            double space2 = (double)(r2.Height - 10) / (double)(valuePairs.Count);
             dataGridView2.Columns.Add(comboBox1.Text, comboBox1.Text);
             dataGridView2.Columns.Add("Distribution", "Distribution");
 
@@ -137,8 +137,8 @@ namespace Homework5._1
             float ratio,ratio2;
             if (maxValue < r.Height) { ratio = (float)((double)(0.9 * r.Height - 100) / (double)maxValue); }
             else { ratio = (float)((double)maxValue * 0.9 / (double)(r.Height - 100)); } /*multiplied by 0.9 to make the chart not touch the top of the rectangle */
-            if (maxValue < r2.Width) { ratio2 = (float)((double)(0.9 * r2.Width - 100) / (double)maxValue); }
-            else { ratio2 = (float)((double)maxValue * 0.9 / (double)(r2.Width - 100)); }
+            if (maxValue < r2.Width) { ratio2 = (float)((double)((r2.Width-100)*0.9) / (double)maxValue); }
+            else { ratio2 = (float)((double)maxValue*0.9 / (double)(r2.Width-100 )); }
 
 
             foreach (var pair in valuePairs)
@@ -146,19 +146,41 @@ namespace Homework5._1
                 X += 1;
                 dataGridView2.Rows.Add(pair.Key, $"{pair.Value} / {valuePairs.Count}");
                 g.DrawLine(PenHistogram, r.Left - 5 + X * (float)(space), r.Height - 100, r.Left - 5 + X * (float)(space), r.Height - pair.Value * ratio - 100);
-                g.DrawLine(PenHistogram, r2.Left + 50, r2.Top + 5 - X * (float)space2, r.Left+50+pair.Value*ratio2, r2.Top + 5 - X * (float)space2);
+                g.DrawLine(PenHistogram, r2.Left + 100, r2.Top + 5 + X * (float)space2, r2.Left+100+pair.Value*ratio2, r2.Top + 5 +X * (float)space2) ;
+
                 if (space > 8)
                 {
                     pictureBox1_Paint(g, r.Left - 13 + (int)(X * space), r.Height - 100, pair.Key);
+
                 }
                 else
                 {
                     g.DrawString("Too many labels to be represented", new Font("Arial", 8), Brushes.Green, new Point(270, r.Height - 50));
                 }
+                if (space2 > 8)
+                {
+                    g.DrawString(pair.Key.Truncate(14), new Font("Arial", 8), Brushes.Green, r2.Left + 10, r2.Top -3 + X * (float)space2);
+
+                }
+                else
+                {
+                    pictureBox1_Paint(g, r2.Left + 40, r.Height - 250, "Too many labels to be represented");
+                }
 
             }
             g.DrawLine(new Pen(Color.Black, 1), r.Left + 5, r.Height - 100, r.Left - 5 + X * (float)(space), r.Height - 100);
+            g.DrawLine(new Pen(Color.Black, 1), r2.Left + 100, r2.Top + 5, r2.Left + 100, r2.Top + 5 + X * (float)space2);
+
+
             pictureBox1.Image = b;
+        }
+    }
+    public static class StringExt
+    {
+        public static string Truncate(this string value, int maxLength)
+        {
+            if (string.IsNullOrEmpty(value)) return value;
+            return value.Length <= maxLength ? value : value.Substring(0, maxLength);
         }
     }
 }

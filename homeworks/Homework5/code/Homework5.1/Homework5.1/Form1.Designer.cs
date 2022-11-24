@@ -116,7 +116,7 @@
             // 
             this.pictureBox1.Location = new System.Drawing.Point(282, 80);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1078, 353);
+            this.pictureBox1.Size = new System.Drawing.Size(1290, 353);
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 
@@ -124,7 +124,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1383, 445);
+            this.ClientSize = new System.Drawing.Size(1584, 445);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.button3);

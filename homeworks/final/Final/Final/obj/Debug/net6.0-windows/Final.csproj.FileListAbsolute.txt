@@ -19,3 +19,5 @@ C:\Users\feder\Desktop\Statistics\homeworks\final\Final\Final\obj\Debug\net6.0-w
 C:\Users\feder\Desktop\Statistics\homeworks\final\Final\Final\obj\Debug\net6.0-windows\Final.Form2_2.resources
 C:\Users\feder\Desktop\Statistics\homeworks\final\Final\Final\obj\Debug\net6.0-windows\Final.Form3_1.resources
 C:\Users\feder\Desktop\Statistics\homeworks\final\Final\Final\obj\Debug\net6.0-windows\Final.Form4_1.resources
+C:\Users\feder\Desktop\Statistics\homeworks\final\Final\Final\obj\Debug\net6.0-windows\Final.Homework5_1.resources
+C:\Users\feder\Desktop\Statistics\homeworks\final\Final\Final\obj\Debug\net6.0-windows\Final.Form5_2.resources
