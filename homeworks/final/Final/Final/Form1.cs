@@ -133,5 +133,85 @@ namespace Final
             h5_2.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             h5_2.Show();
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            for (int i = Application.OpenForms.Count - 1; i >= 0; i += -1)
+            {
+                if (!object.ReferenceEquals(Application.OpenForms[i], this))
+                {
+                    Application.OpenForms[i].Close();
+                }
+            }
+            Homework1_1 h1_1 = new Homework1_1();
+            h1_1.StartPosition = FormStartPosition.Manual;
+            h1_1.Location = new Point(0, 50);
+            h1_1.TopLevel = false;
+            h1_1.TopMost = true;
+            this.Controls.Add(h1_1);
+            h1_1.ControlBox = false;
+            h1_1.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            h1_1.Show();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            for (int i = Application.OpenForms.Count - 1; i >= 0; i += -1)
+            {
+                if (!object.ReferenceEquals(Application.OpenForms[i], this))
+                {
+                    Application.OpenForms[i].Close();
+                }
+            }
+            Form6_1 h6_1 = new Form6_1();
+            h6_1.StartPosition = FormStartPosition.Manual;
+            h6_1.Location = new Point(0, 50);
+            h6_1.TopLevel = false;
+            h6_1.TopMost = true;
+            this.Controls.Add(h6_1);
+            h6_1.ControlBox = false;
+            h6_1.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            h6_1.Show();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            for (int i = Application.OpenForms.Count - 1; i >= 0; i += -1)
+            {
+                if (!object.ReferenceEquals(Application.OpenForms[i], this))
+                {
+                    Application.OpenForms[i].Close();
+                }
+            }
+            Form7_1 h7_1 = new Form7_1();
+            h7_1.StartPosition = FormStartPosition.Manual;
+            h7_1.Location = new Point(0, 50);
+            h7_1.TopLevel = false;
+            h7_1.TopMost = true;
+            this.Controls.Add(h7_1);
+            h7_1.ControlBox = false;
+            h7_1.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            h7_1.Show();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            for (int i = Application.OpenForms.Count - 1; i >= 0; i += -1)
+            {
+                if (!object.ReferenceEquals(Application.OpenForms[i], this))
+                {
+                    Application.OpenForms[i].Close();
+                }
+            }
+            Form8_1 h8_1 = new Form8_1();
+            h8_1.StartPosition = FormStartPosition.Manual;
+            h8_1.Location = new Point(0, 50);
+            h8_1.TopLevel = false;
+            h8_1.TopMost = true;
+            this.Controls.Add(h8_1);
+            h8_1.ControlBox = false;
+            h8_1.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            h8_1.Show();
+        }
     }
 }

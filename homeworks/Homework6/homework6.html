@@ -26,9 +26,17 @@
         <!-- Tweaks for older IEs-->
         <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
-        <!--[if lt IE 9]>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script> <!-- for equations --><!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+        <script type="text/x-mathjax-config"> <!-- for inline equations -->
+         MathJax.Hub.Config({
+           tex2jax: {
+             inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+             processEscapes: true
+           }
+         });
+       </script>
      </head>
 </head>
 
@@ -57,8 +65,11 @@
                                 <a class="nav-link" href="../../index.html"> Home  </a>
                              </li>
                              <li class="nav-item">
-                                <a class="nav-link" href="#research">Reasearch</a>
-                             </li>
+                              <a class="nav-link" href="#research">Reasearch</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" href="#application">Application</a>
+                           </li>
                           </ul>
                        </div>
                     </nav>
@@ -148,7 +159,20 @@
                   <div class="titlepage">
                   <h2>1- Try to explain in your own words, the concept of population and sampling distribution</h2>
                   <h3 style="text-align: justify; line-height: 2;">
-                     text
+                     In statistics, a population is the pool of individuals from which a statistical sample is drawn for a study. 
+                     Thus, any selection of individuals grouped by a common feature can be said to be a population. 
+                     A sample may also refer to a statistically significant portion of a population, not an entire population. 
+                     For this reason, a statistical analysis of a sample must report the approximate standard deviation, or standard error, of its results from the entire population.
+                     <br>
+                     If the entire population is too large to be analysed, statistics tries to learn something about it by choosing and then analyzing subgroups. 
+                     A subset of the population is called a "sample". Samples to be representative of the population must be chosen completely at random.
+                     The information obtained from the statistical sample allows statisticians to develop hypotheses about the larger population using the inferential statistics.
+                     <br><br>
+                     A sampling distribution is a probability distribution of a statistic obtained from a larger number of samples drawn from a specific population. 
+                     The sampling distribution of a given population is the distribution of frequencies of a range of different outcomes that could possibly occur for a statistic of a population.
+
+                     <br><br>
+                     <a href="https://www.investopedia.com/terms/p/population.asp" style:"color: blue;">https://www.investopedia.com/terms/p/population.asp</a>
                   </h3>
                   <h2>2- Show the expected value and variance of the sample mean and take a look at the analogous results for the sample variance<h2>
                   <h3 style="text-align: justify; line-height: 2;">

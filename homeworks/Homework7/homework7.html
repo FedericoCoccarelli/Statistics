@@ -9,7 +9,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="viewport" content="initial-scale=1, maximum-scale=1">
         <!-- site metas -->
-        <title>Federico Coccarelli Homework</title>
+        <title>Federico Coccarelli Homework 7</title>
         <meta name="keywords" content="">
         <meta name="description" content="">
         <meta name="author" content="">
@@ -26,9 +26,17 @@
         <!-- Tweaks for older IEs-->
         <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
-        <!--[if lt IE 9]>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script> <!-- for equations --><!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+        <script type="text/x-mathjax-config"> <!-- for inline equations -->
+         MathJax.Hub.Config({
+           tex2jax: {
+             inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+             processEscapes: true
+           }
+         });
+       </script>
      </head>
 </head>
 
@@ -57,8 +65,12 @@
                                 <a class="nav-link" href="../../index.html"> Home  </a>
                              </li>
                              <li class="nav-item">
-                                <a class="nav-link" href="#research">Reasearch</a>
-                             </li>
+                              <a class="nav-link" href="#research">Reasearch</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" href="#application">Application</a>
+                           </li>
+
                           </ul>
                        </div>
                     </nav>
@@ -96,10 +108,12 @@
                <div class="container-fluid" >
                   <div class="carousel-caption" >
                            <div class="text-bg">
-                              <span style="width: 100%;">Homework</span> 
+                              <span style="width: 100%;">Homework 7</span> 
                               <h1>Researches</h1>
                               <p>
-                               title
+                               1) Try to understand the general idea of the Lebesgue-Stieltjes integral and why it is useful concept and notation in Theory of Probability.
+                               <br>
+                               2) Explain in your own words the "Law of large numbers" and sketch a simple proof (Markov inequality, Čebyšëv inequality, ... ).
                               </p>
                               <a href="#research">Read More </a>
                            </div>
@@ -113,23 +127,10 @@
                               <span>Homework</span>
                               <h1>Application</h1>
                               <p>
-                                 title
+                                 1) Consider a general scheme ad the simulation of previous homework and simulate the distribution of p = SUM(xi) , where xi are Bernoulli(lambda/n), with success probability lambda /n, where lambda is a user constant ("arrival rate").
+                                 Also plot the distribution of the "interarrival times".
                               </p>
                               <a href="#application">Read More </a>
-                           </div>
-                  </div>
-               </div>
-            </div>
-            <div class="carousel-item">
-               <div class="container-fluid">
-                  <div class="carousel-caption">
-                           <div class="text-bg">
-                              <span>Homework</span>
-                              <h1>Research on App</h1>
-                              <p style="padding-top: 38px ; padding-bottom: 38px">
-                                 title
-                              </p>
-                              <a href="#">Read More </a>
                            </div>
                   </div>
                </div>
@@ -157,9 +158,44 @@
             <div class="row">
                <div class="col-md-12">
                   <div class="titlepage">
-                  <h2>1- title<h2>
+                  <h2>1- Try to understand the general idea of the Lebesgue-Stieltjes integral and why it is useful concept and notation in Theory of Probability<h2>
                   <h3 style="text-align: justify; line-height: 2;">
-                     text
+                     
+
+                  </h3>
+                  <h2>2- Explain in your own words the "Law of large numbers" and sketch a simple proof (Markov inequality, Čebyšëv inequality, ... )<h2>
+                  <h3 style="text-align: justify; line-height: 2;">
+                     Before talking about the law of large number we firstly need to intruduce two important theorems: the Markov Inequality and the Chebyshev Inequality. 
+                     <br><br>
+                     <b>Markov Inequality</b>
+                     <br>
+                     The Markov inequality states that given any non-negative random variable $X$ and a generic $a > 0$
+                     $$ P(X \ge a)\le \frac{E[X]}{a} $$
+                     
+                     <b>Proof</b>
+                     <br>
+                     Assuming $X$ continuous and being $f$ it's density:
+                     $$ E[X] = \int_{0} ^{\infty} x f(x) dx = \int_{0} ^{a} x f(x) dx + \int_{a} ^{\infty} x f(x) dx $$
+                     $$ \ge \int_{a} ^{\infty} xf(x) dx \ge \int_{a} ^{\infty} af(x) dx = a\int_{a} ^{\infty} f(x) dx$$
+                     $$ a P(X \ge a) $$
+                     Dividing all by $a$ we obtain : $$ P(X \ge a)\le \frac{E[X]}{a} $$
+                     <br><br>
+                     <b>Chebyshev Inequality</b>
+                     <br>
+                     If $X$ is a random variable with mean $\mu$ and variance $\sigma^2$, then for any $r>0$:
+                     $$P(|X - \mu|\ge r)\le \frac{\sigma^2}{r^2}$$
+                     <b>Proof</b>
+                     <br>
+                     The proof easily follows from the Markov inequality. In fact, if $X$ is a random variable, then $|X - \mu|$ is a non-negative random variable. 
+                     Hence, for this new random variable the Markov inequality is valid and then $\forall A > 0$ :
+                     $$P(|X-\mu|^2 \ge A)|le \frac{E(|X-\mu|^2)}{A}$$
+                     but $E(|X-\mu|^2)$ is the definition of variance so we obtain:
+                     $$P(|X - \mu|\ge r)\le \frac{\sigma^2}{r^2}$$
+                     <br><br>
+                     <b>Weak Law of Large Numbers</b>
+                     <br>
+                     
+
                   </h3>
                   </div>
                </div>
@@ -196,26 +232,7 @@
             </div>
             
             <div id="researchonapp"  class="homeworks">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-12">
-                  <div class="titlepage">
-                     <h2> <img src="../../images/researchonapp.png" alt="#"/> Research on App</h2>
-                  </div>
-               </div>
-            </div>
-            <div class="row">
-               <div class="col-md-12">
-                  <div class="titlepage">
-                  <h2>title<h2>
-                  <br>
-                  <h3 style="text-align: justify; line-height: 2;">
-                     text
-
-                  <h3>
-                  </div>
-               </div>
-            </div>
+         
          </div>
       </div>
             

@@ -1,5 +1,0 @@
-C:\Users\Corsair\OneDrive\Cybersecurity\Statistics\Statistics Homeworks\homeworks\Homework1\code\obj\Debug\net6.0\code.csproj.AssemblyReference.cache
-C:\Users\Corsair\OneDrive\Cybersecurity\Statistics\Statistics Homeworks\homeworks\Homework1\code\obj\Debug\net6.0\code.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Corsair\OneDrive\Cybersecurity\Statistics\Statistics Homeworks\homeworks\Homework1\code\obj\Debug\net6.0\code.AssemblyInfoInputs.cache
-C:\Users\Corsair\OneDrive\Cybersecurity\Statistics\Statistics Homeworks\homeworks\Homework1\code\obj\Debug\net6.0\code.AssemblyInfo.cs
-C:\Users\Corsair\OneDrive\Cybersecurity\Statistics\Statistics Homeworks\homeworks\Homework1\code\obj\Debug\net6.0\code.csproj.CoreCompileInputs.cache

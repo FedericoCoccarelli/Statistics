@@ -1,0 +1,17 @@
+C:\Users\feder\Desktop\Statistics\homeworks\Homework1\code\Homework1\Homework1\bin\Debug\net6.0-windows\Homework1.exe
+C:\Users\feder\Desktop\Statistics\homeworks\Homework1\code\Homework1\Homework1\bin\Debug\net6.0-windows\Homework1.deps.json
+C:\Users\feder\Desktop\Statistics\homeworks\Homework1\code\Homework1\Homework1\bin\Debug\net6.0-windows\Homework1.runtimeconfig.json
+C:\Users\feder\Desktop\Statistics\homeworks\Homework1\code\Homework1\Homework1\bin\Debug\net6.0-windows\Homework1.dll
+C:\Users\feder\Desktop\Statistics\homeworks\Homework1\code\Homework1\Homework1\bin\Debug\net6.0-windows\Homework1.pdb
+C:\Users\feder\Desktop\Statistics\homeworks\Homework1\code\Homework1\Homework1\obj\Debug\net6.0-windows\Homework1.csproj.AssemblyReference.cache
+C:\Users\feder\Desktop\Statistics\homeworks\Homework1\code\Homework1\Homework1\obj\Debug\net6.0-windows\Homework1.Form1.resources
+C:\Users\feder\Desktop\Statistics\homeworks\Homework1\code\Homework1\Homework1\obj\Debug\net6.0-windows\Homework1.csproj.GenerateResource.cache
+C:\Users\feder\Desktop\Statistics\homeworks\Homework1\code\Homework1\Homework1\obj\Debug\net6.0-windows\Homework1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\feder\Desktop\Statistics\homeworks\Homework1\code\Homework1\Homework1\obj\Debug\net6.0-windows\Homework1.AssemblyInfoInputs.cache
+C:\Users\feder\Desktop\Statistics\homeworks\Homework1\code\Homework1\Homework1\obj\Debug\net6.0-windows\Homework1.AssemblyInfo.cs
+C:\Users\feder\Desktop\Statistics\homeworks\Homework1\code\Homework1\Homework1\obj\Debug\net6.0-windows\Homework1.csproj.CoreCompileInputs.cache
+C:\Users\feder\Desktop\Statistics\homeworks\Homework1\code\Homework1\Homework1\obj\Debug\net6.0-windows\Homework1.dll
+C:\Users\feder\Desktop\Statistics\homeworks\Homework1\code\Homework1\Homework1\obj\Debug\net6.0-windows\refint\Homework1.dll
+C:\Users\feder\Desktop\Statistics\homeworks\Homework1\code\Homework1\Homework1\obj\Debug\net6.0-windows\Homework1.pdb
+C:\Users\feder\Desktop\Statistics\homeworks\Homework1\code\Homework1\Homework1\obj\Debug\net6.0-windows\Homework1.genruntimeconfig.cache
+C:\Users\feder\Desktop\Statistics\homeworks\Homework1\code\Homework1\Homework1\obj\Debug\net6.0-windows\ref\Homework1.dll
