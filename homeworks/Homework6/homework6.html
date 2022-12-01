@@ -176,7 +176,81 @@
                   </h3>
                   <h2>2- Show the expected value and variance of the sample mean and take a look at the analogous results for the sample variance<h2>
                   <h3 style="text-align: justify; line-height: 2;">
-                     text
+                     In the previous research we talked about samples, in this research we will talk about it's mean and variance called respectively sample mean and sample variance and are 
+                     theirselves two random variables, we can compute their expected value and variance .
+                     <br><br>
+                     <b>Sample mean</b>
+                     <br>
+                     Let a sequence of identical distributed and indipendent random variables$X_1 , X_2 ,..., X_n$ be a random sample of size $n$ from a distribution (population),
+                     we can define the mean random variable called “sample mean” as the following:
+                     $$ \bar{X} = \frac{X_1 + X_2 + ... + X_n}{n} $$
+                     <b>Expected value</b>
+                     <br>
+                     Starting with the definition of the sample mean, we have:
+
+                     $$E(\bar{X})=E(\frac{X_1+X_2+\dots+X_n}{n})$$
+
+                     Then, using the linear operator property of expectation, we get:
+                     $$E(\bar{X})=\frac{1}{n} [E(X_1)+E(X_2)+\dots+E(X_n)]$$
+
+                     Now, the $X_i$ are identically distributed, which means they have the same mean (\mu). Therefore, replacing (E(X_i)) with the alternative notation (\mu), we get:
+                     $$E(\bar{X})=\frac{1}{n}[\mu+\mu+\cdots+\mu]$$
+
+                     Now, because there are (n) $\mu$'s in the above formula, we can rewrite the expected value as: 
+
+                     $$E(\bar{X})=\frac{1}{n}[n \mu]=\mu $$
+                     We have shown that the expected value of the sample mean $\bar{X}$ is $\mu$.
+                      This result is the same as the entire population.
+
+                     <br><br>
+                     <b>Variance</b>
+                     <br>
+                     Starting with the definition of the sample mean, we have:
+
+                     $$Var(\bar{X})=Var(\frac{X_1+X_2+\cdots+X_n}{n})$$
+                     Rewriting the term on the right so that it is clear that we have a linear combination of $X_i$'s, we get:
+
+                     $$Var(\bar{X})=Var(\frac{1}{n}X_1+\frac{1}{n}X_2+\cdots+\frac{1}{n}X_n)$$
+
+                     Then, applying the theorem on the last page, we get:
+
+                     $$Var(\bar{X})=\frac{1}{n^2}Var(X_1)+\frac{1}{n^2}Var(X_2)+\cdots+\frac{1}{n^2}Var(X_n)$$
+
+                     Now, the $X_i$ are identically distributed, which means they have the same variance $\sigma^2$. 
+                     Therefore, replacing $Var(X_i)$ with the alternative notation $\sigma^2$, we get:
+
+                     $$Var(\bar{X})=\frac{1}{n^2}[\sigma^2+\sigma^2+\cdots+\sigma^2]$$
+
+                     Now, because there are (n) $\sigma^2$'s in the above formula, we can rewrite the expected value as:
+
+                     $$Var(\bar{X})=\frac{1}{n^2}[n\sigma^2]=\frac{\sigma^2}{n}$$
+
+                     Our result indicates that while the expected value of the sample mean is identical to the expected value of the population, 
+                     the variance of the sample mean is the variance of the population divided by the sample size.
+                     <br><br>
+                     <b>Sample variance</b>
+                     <br>
+                     As for the sample mean let's take a look at the definition of sample variance:
+                     $$[S^2 = \frac{1}{n}\sum_{i=1}^{n}(X_i - \bar{X})^2] $$
+
+                     <br><br>
+                     <b>Variance</b>
+                     <p>Here's a general derivation that does not assume normality. </p>
+
+                     <p>Let's rewrite  the sample variance $S^2$  as an average over all pairs of indices:
+                     $$S^2={1\over{n\choose 2}}\sum_{\{i,j\}} {1\over2}(X_i-X_j)^2.$$ 
+                     Since  $\mathbb{E}[(X_i-X_j)^2/2]=\sigma^2$, we see that $S^2$ is an unbiased estimator for $\sigma^2$. </p>
+
+                     <p>The variance of $S^2$ is the expected value of 
+                     $$\left({1\over{n\choose 2}}\sum_{\{i,j\}} \left[{1\over2}(X_i-X_j)^2-\sigma^2\right]\right)^2.$$   </p>
+
+                     <p>When you expand the outer square, there are 3 types of cross product terms 
+                        $$\left[{1\over2}(X_i-X_j)^2-\sigma^2\right] \left[{1\over2}(X_k-X_\ell)^2-\sigma^2\right]$$
+                        depending on the size of the intersection $\{i,j\}\cap\{k,\ell\}$. </p>
+
+
+                     <p>Putting it all together shows that $$\mbox{Var}(S^2)={\mu_4\over n}-{\sigma^4\,(n-3)\over n\,(n-1)}.$$ Here $\mu_4=\mathbb{E}[(X-\mu)^4]$ is the fourth central moment of $X$.</p>
+
                   </h3>
                   </div>
                </div>
