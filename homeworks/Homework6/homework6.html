@@ -172,6 +172,8 @@
                      The sampling distribution of a given population is the distribution of frequencies of a range of different outcomes that could possibly occur for a statistic of a population.
 
                      <br><br>
+                     References:
+                     <br>
                      <a href="https://www.investopedia.com/terms/p/population.asp" style:"color: blue;">https://www.investopedia.com/terms/p/population.asp</a>
                   </h3>
                   <h2>2- Show the expected value and variance of the sample mean and take a look at the analogous results for the sample variance<h2>
@@ -232,24 +234,17 @@
                      <br>
                      As for the sample mean let's take a look at the definition of sample variance:
                      $$[S^2 = \frac{1}{n}\sum_{i=1}^{n}(X_i - \bar{X})^2] $$
-
+                     <br><br>
+                     <b>Expected value</b>
+                     <br>
+                     $$E[S^2]=\frac{1}{n-1}E[\sum(X_i^2-n\bar{X}^2)]=\frac{1}{n-1}[\sum(E(X_i^2)-nE(\bar{X}^2))]=$$
+                     $$=\frac{1}{n-1}[\sum((Var(X_i)+E(X_i)^2)-n(Var\bar{X})+E(\bar{X}^2))]=$$
+                     $$=\frac{1}{n-1}[\sum((\sigma^2+\mu^2)-n(\frac{\sigma^2}{n}+\mu^2))]= \frac{1}{n-1}[n(\sigma^2+\mu^2)-\sigma^2-n\mu^2]=$$
+                     $$=\frac{1}{n-1}[(n-1)\sigma^2]=\sigma^2$$ 
+                     Then the expected value of the sample variance perfectly extimates the variance of the entire population.
                      <br><br>
                      <b>Variance</b>
-                     <p>Here's a general derivation that does not assume normality. </p>
-
-                     <p>Let's rewrite  the sample variance $S^2$  as an average over all pairs of indices:
-                     $$S^2={1\over{n\choose 2}}\sum_{\{i,j\}} {1\over2}(X_i-X_j)^2.$$ 
-                     Since  $\mathbb{E}[(X_i-X_j)^2/2]=\sigma^2$, we see that $S^2$ is an unbiased estimator for $\sigma^2$. </p>
-
-                     <p>The variance of $S^2$ is the expected value of 
-                     $$\left({1\over{n\choose 2}}\sum_{\{i,j\}} \left[{1\over2}(X_i-X_j)^2-\sigma^2\right]\right)^2.$$   </p>
-
-                     <p>When you expand the outer square, there are 3 types of cross product terms 
-                        $$\left[{1\over2}(X_i-X_j)^2-\sigma^2\right] \left[{1\over2}(X_k-X_\ell)^2-\sigma^2\right]$$
-                        depending on the size of the intersection $\{i,j\}\cap\{k,\ell\}$. </p>
-
-
-                     <p>Putting it all together shows that $$\mbox{Var}(S^2)={\mu_4\over n}-{\sigma^4\,(n-3)\over n\,(n-1)}.$$ Here $\mu_4=\mathbb{E}[(X-\mu)^4]$ is the fourth central moment of $X$.</p>
+                     <p>The variance is: $$\mbox{Var}(S^2)={\mu_4\over n}-{\sigma^4\,(n-3)\over n\,(n-1)}.$$ Here $\mu_4=\mathbb{E}[(X-\mu)^4]$ is the fourth central moment of $X$.</p>
 
                   </h3>
                   </div>

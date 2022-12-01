@@ -194,6 +194,24 @@
                      <br><br>
                      <b>Weak Law of Large Numbers</b>
                      <br>
+                     Let’s consider now any random variable $X$, $\bar{X}$ his sample mean and we have already seen that $E(\bar{X})=\mu$ and that $Var(\bar{X})=\frac{\sigma^2}{n}$.
+                     By Chebyshev inequality:
+
+                     $$P[(|\bar{X}-E(\bar{X})|\geq a)\leq\frac{Var(\bar{X})}{a^{2}}]$$
+
+                     But knowing expected value and variance of the sample mean, we can rewrite:
+
+                     $$P(|\bar{X}-\mu|\geq a)\leq\frac{\sigma^2}{na^{2}}$$
+
+                     Then, if the number of samples we take for the sample mean is arbitrarily large, meaning that $n\to\infty$, we will have that:
+
+                     $$P(|\bar{X}-\mu|\geq a)\rightarrow 0$$
+
+                     But this is exactly the definition of convergence in probability: we have that for $n\to\infty$, the sample mean $\bar{x}$ converges in probability to the expected value $\mu$.
+
+                     $$\bar{X}_ n\rightarrow 0 \text{  when  } n \rightarrow +\infty$$
+
+                     This result is called weak law of large numbers.
                      
 
                   </h3>
