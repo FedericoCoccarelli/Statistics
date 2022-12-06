@@ -32,26 +32,38 @@ namespace Homework8._2
             g = Graphics.FromImage(b);
             g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             g.Clear(Color.White);
-            Rectangle r = new Rectangle(1, 1, b.Width - 2, b.Height - 2);
+            Rectangle r = new Rectangle(1, 1, 201, 201);
+            Rectangle r2 = new Rectangle(1, 201, 201, 201);
+
             g.FillRectangle(Brushes.White, r);
             g.DrawRectangle(Pens.Black, r);
+            g.FillRectangle(Brushes.White, r2);
+            g.DrawRectangle(Pens.Black, r2);
             int[] result = new int[100];
-            int mean = 10;
-            double stddev = 3;
-            for (int i = 0; i < 100; i++)
+            int X;
+            double Y;
+            int len = 200;
+            int[] resultX = new int[len];
+            int[] resultY = new int[len];
+            for (int i = 0; i < 1000; i++)
             {
-                Random rand = new Random(); //reuse this if you are generating many
-                double u1 = 1.0 - rand.NextDouble(); //uniform(0,1] random doubles
-                double u2 = 1.0 - rand.NextDouble();
-                double randStdNormal = Math.Sqrt(-2.0 * Math.Log(u1)) *
-                             Math.Sin(2.0 * Math.PI * u2); //random normal(0,1)
-                double num =
-                             mean + stddev * randStdNormal; //random normal(mean,stdDev^2)
-                result[i] = (int)num;
+                X = random.Next(1, len/2);
+                Y = random.NextDouble(); /* generates a double between 0.0 and 1.0*/
+                Y = Y * 2 * Math.PI;
+
+                int realX = (int)(X * Math.Cos(Y));
+                int realY = (int)(X * Math.Sin(Y));
+
+                resultX[realX + len / 2] += 1;
+                resultY[realY + len / 2] += 1;
+
             }
-            for (int i = 0; i < 100; i ++)
+
+            for (int i = 0; i < len; i += 5)
             {
-                g.DrawLine(Penhistogram, i*4, b.Height, i*4, b.Height - result[i]*5);
+                g.DrawLine(Penhistogram, 4+i, 200,4+ i, 200 - resultX[i] - resultX[i + 1] - resultX[i + 2] - resultX[i + 3] - resultX[i + 4]);
+                g.DrawLine(Penhistogram, 4 + i, 400, 4 + i, 400 - resultY[i] - resultY[i + 1] - resultY[i + 2] - resultY[i + 3] - resultY[i + 4]);
+
             }
             pictureBox1.Image = b;
 

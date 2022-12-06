@@ -15,3 +15,20 @@ C:\Users\feder\Desktop\Statistics\homeworks\Homework8\code\Homework8.2\Homework8
 C:\Users\feder\Desktop\Statistics\homeworks\Homework8\code\Homework8.2\Homework8.2\obj\Debug\net6.0-windows\Homework8.2.pdb
 C:\Users\feder\Desktop\Statistics\homeworks\Homework8\code\Homework8.2\Homework8.2\obj\Debug\net6.0-windows\Homework8.2.genruntimeconfig.cache
 C:\Users\feder\Desktop\Statistics\homeworks\Homework8\code\Homework8.2\Homework8.2\obj\Debug\net6.0-windows\ref\Homework8.2.dll
+C:\Users\Corsair\OneDrive\Cybersecurity\Statistics\Statistics Homeworks\homeworks\Homework8\code\Homework8.2\Homework8.2\obj\Debug\net6.0-windows\Homework8.2.csproj.AssemblyReference.cache
+C:\Users\Corsair\OneDrive\Cybersecurity\Statistics\Statistics Homeworks\homeworks\Homework8\code\Homework8.2\Homework8.2\obj\Debug\net6.0-windows\Homework8._2.Form1.resources
+C:\Users\Corsair\OneDrive\Cybersecurity\Statistics\Statistics Homeworks\homeworks\Homework8\code\Homework8.2\Homework8.2\obj\Debug\net6.0-windows\Homework8.2.csproj.GenerateResource.cache
+C:\Users\Corsair\OneDrive\Cybersecurity\Statistics\Statistics Homeworks\homeworks\Homework8\code\Homework8.2\Homework8.2\obj\Debug\net6.0-windows\Homework8.2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Corsair\OneDrive\Cybersecurity\Statistics\Statistics Homeworks\homeworks\Homework8\code\Homework8.2\Homework8.2\obj\Debug\net6.0-windows\Homework8.2.AssemblyInfoInputs.cache
+C:\Users\Corsair\OneDrive\Cybersecurity\Statistics\Statistics Homeworks\homeworks\Homework8\code\Homework8.2\Homework8.2\obj\Debug\net6.0-windows\Homework8.2.AssemblyInfo.cs
+C:\Users\Corsair\OneDrive\Cybersecurity\Statistics\Statistics Homeworks\homeworks\Homework8\code\Homework8.2\Homework8.2\obj\Debug\net6.0-windows\Homework8.2.csproj.CoreCompileInputs.cache
+C:\Users\Corsair\OneDrive\Cybersecurity\Statistics\Statistics Homeworks\homeworks\Homework8\code\Homework8.2\Homework8.2\obj\Debug\net6.0-windows\Homework8.2.dll
+C:\Users\Corsair\OneDrive\Cybersecurity\Statistics\Statistics Homeworks\homeworks\Homework8\code\Homework8.2\Homework8.2\obj\Debug\net6.0-windows\refint\Homework8.2.dll
+C:\Users\Corsair\OneDrive\Cybersecurity\Statistics\Statistics Homeworks\homeworks\Homework8\code\Homework8.2\Homework8.2\obj\Debug\net6.0-windows\Homework8.2.pdb
+C:\Users\Corsair\OneDrive\Cybersecurity\Statistics\Statistics Homeworks\homeworks\Homework8\code\Homework8.2\Homework8.2\bin\Debug\net6.0-windows\Homework8.2.exe
+C:\Users\Corsair\OneDrive\Cybersecurity\Statistics\Statistics Homeworks\homeworks\Homework8\code\Homework8.2\Homework8.2\bin\Debug\net6.0-windows\Homework8.2.deps.json
+C:\Users\Corsair\OneDrive\Cybersecurity\Statistics\Statistics Homeworks\homeworks\Homework8\code\Homework8.2\Homework8.2\bin\Debug\net6.0-windows\Homework8.2.runtimeconfig.json
+C:\Users\Corsair\OneDrive\Cybersecurity\Statistics\Statistics Homeworks\homeworks\Homework8\code\Homework8.2\Homework8.2\bin\Debug\net6.0-windows\Homework8.2.dll
+C:\Users\Corsair\OneDrive\Cybersecurity\Statistics\Statistics Homeworks\homeworks\Homework8\code\Homework8.2\Homework8.2\bin\Debug\net6.0-windows\Homework8.2.pdb
+C:\Users\Corsair\OneDrive\Cybersecurity\Statistics\Statistics Homeworks\homeworks\Homework8\code\Homework8.2\Homework8.2\obj\Debug\net6.0-windows\Homework8.2.genruntimeconfig.cache
+C:\Users\Corsair\OneDrive\Cybersecurity\Statistics\Statistics Homeworks\homeworks\Homework8\code\Homework8.2\Homework8.2\obj\Debug\net6.0-windows\ref\Homework8.2.dll

@@ -15,3 +15,20 @@ C:\Users\feder\Desktop\Statistics\homeworks\Homework5\code\Homework5.2\Homework5
 C:\Users\feder\Desktop\Statistics\homeworks\Homework5\code\Homework5.2\Homework5.2\obj\Debug\net6.0-windows\Homework5.2.pdb
 C:\Users\feder\Desktop\Statistics\homeworks\Homework5\code\Homework5.2\Homework5.2\obj\Debug\net6.0-windows\Homework5.2.genruntimeconfig.cache
 C:\Users\feder\Desktop\Statistics\homeworks\Homework5\code\Homework5.2\Homework5.2\obj\Debug\net6.0-windows\ref\Homework5.2.dll
+C:\Users\Corsair\OneDrive\Cybersecurity\Statistics\Statistics Homeworks\homeworks\Homework5\code\Homework5.2\Homework5.2\bin\Debug\net6.0-windows\Homework5.2.exe
+C:\Users\Corsair\OneDrive\Cybersecurity\Statistics\Statistics Homeworks\homeworks\Homework5\code\Homework5.2\Homework5.2\bin\Debug\net6.0-windows\Homework5.2.deps.json
+C:\Users\Corsair\OneDrive\Cybersecurity\Statistics\Statistics Homeworks\homeworks\Homework5\code\Homework5.2\Homework5.2\bin\Debug\net6.0-windows\Homework5.2.runtimeconfig.json
+C:\Users\Corsair\OneDrive\Cybersecurity\Statistics\Statistics Homeworks\homeworks\Homework5\code\Homework5.2\Homework5.2\bin\Debug\net6.0-windows\Homework5.2.dll
+C:\Users\Corsair\OneDrive\Cybersecurity\Statistics\Statistics Homeworks\homeworks\Homework5\code\Homework5.2\Homework5.2\bin\Debug\net6.0-windows\Homework5.2.pdb
+C:\Users\Corsair\OneDrive\Cybersecurity\Statistics\Statistics Homeworks\homeworks\Homework5\code\Homework5.2\Homework5.2\obj\Debug\net6.0-windows\Homework5.2.csproj.AssemblyReference.cache
+C:\Users\Corsair\OneDrive\Cybersecurity\Statistics\Statistics Homeworks\homeworks\Homework5\code\Homework5.2\Homework5.2\obj\Debug\net6.0-windows\Homework5._2.Form1.resources
+C:\Users\Corsair\OneDrive\Cybersecurity\Statistics\Statistics Homeworks\homeworks\Homework5\code\Homework5.2\Homework5.2\obj\Debug\net6.0-windows\Homework5.2.csproj.GenerateResource.cache
+C:\Users\Corsair\OneDrive\Cybersecurity\Statistics\Statistics Homeworks\homeworks\Homework5\code\Homework5.2\Homework5.2\obj\Debug\net6.0-windows\Homework5.2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Corsair\OneDrive\Cybersecurity\Statistics\Statistics Homeworks\homeworks\Homework5\code\Homework5.2\Homework5.2\obj\Debug\net6.0-windows\Homework5.2.AssemblyInfoInputs.cache
+C:\Users\Corsair\OneDrive\Cybersecurity\Statistics\Statistics Homeworks\homeworks\Homework5\code\Homework5.2\Homework5.2\obj\Debug\net6.0-windows\Homework5.2.AssemblyInfo.cs
+C:\Users\Corsair\OneDrive\Cybersecurity\Statistics\Statistics Homeworks\homeworks\Homework5\code\Homework5.2\Homework5.2\obj\Debug\net6.0-windows\Homework5.2.csproj.CoreCompileInputs.cache
+C:\Users\Corsair\OneDrive\Cybersecurity\Statistics\Statistics Homeworks\homeworks\Homework5\code\Homework5.2\Homework5.2\obj\Debug\net6.0-windows\Homework5.2.dll
+C:\Users\Corsair\OneDrive\Cybersecurity\Statistics\Statistics Homeworks\homeworks\Homework5\code\Homework5.2\Homework5.2\obj\Debug\net6.0-windows\refint\Homework5.2.dll
+C:\Users\Corsair\OneDrive\Cybersecurity\Statistics\Statistics Homeworks\homeworks\Homework5\code\Homework5.2\Homework5.2\obj\Debug\net6.0-windows\Homework5.2.pdb
+C:\Users\Corsair\OneDrive\Cybersecurity\Statistics\Statistics Homeworks\homeworks\Homework5\code\Homework5.2\Homework5.2\obj\Debug\net6.0-windows\Homework5.2.genruntimeconfig.cache
+C:\Users\Corsair\OneDrive\Cybersecurity\Statistics\Statistics Homeworks\homeworks\Homework5\code\Homework5.2\Homework5.2\obj\Debug\net6.0-windows\ref\Homework5.2.dll

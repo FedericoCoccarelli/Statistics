@@ -9,3 +9,14 @@ C:\Users\feder\Desktop\Statistics\homeworks\Homework8\code\Homework8\Homework8\o
 C:\Users\feder\Desktop\Statistics\homeworks\Homework8\code\Homework8\Homework8\obj\Debug\Homework8.csproj.CoreCompileInputs.cache
 C:\Users\feder\Desktop\Statistics\homeworks\Homework8\code\Homework8\Homework8\obj\Debug\Homework8.exe
 C:\Users\feder\Desktop\Statistics\homeworks\Homework8\code\Homework8\Homework8\obj\Debug\Homework8.pdb
+C:\Users\Corsair\OneDrive\Cybersecurity\Statistics\Statistics Homeworks\homeworks\Homework8\code\Homework8\Homework8\bin\Debug\Homework8.exe.config
+C:\Users\Corsair\OneDrive\Cybersecurity\Statistics\Statistics Homeworks\homeworks\Homework8\code\Homework8\Homework8\bin\Debug\Homework8.exe
+C:\Users\Corsair\OneDrive\Cybersecurity\Statistics\Statistics Homeworks\homeworks\Homework8\code\Homework8\Homework8\bin\Debug\Homework8.pdb
+C:\Users\Corsair\OneDrive\Cybersecurity\Statistics\Statistics Homeworks\homeworks\Homework8\code\Homework8\Homework8\obj\Debug\Homework8.csproj.AssemblyReference.cache
+C:\Users\Corsair\OneDrive\Cybersecurity\Statistics\Statistics Homeworks\homeworks\Homework8\code\Homework8\Homework8\obj\Debug\Homework8.csproj.SuggestedBindingRedirects.cache
+C:\Users\Corsair\OneDrive\Cybersecurity\Statistics\Statistics Homeworks\homeworks\Homework8\code\Homework8\Homework8\obj\Debug\Homework8.Form1.resources
+C:\Users\Corsair\OneDrive\Cybersecurity\Statistics\Statistics Homeworks\homeworks\Homework8\code\Homework8\Homework8\obj\Debug\Homework8.Properties.Resources.resources
+C:\Users\Corsair\OneDrive\Cybersecurity\Statistics\Statistics Homeworks\homeworks\Homework8\code\Homework8\Homework8\obj\Debug\Homework8.csproj.GenerateResource.cache
+C:\Users\Corsair\OneDrive\Cybersecurity\Statistics\Statistics Homeworks\homeworks\Homework8\code\Homework8\Homework8\obj\Debug\Homework8.csproj.CoreCompileInputs.cache
+C:\Users\Corsair\OneDrive\Cybersecurity\Statistics\Statistics Homeworks\homeworks\Homework8\code\Homework8\Homework8\obj\Debug\Homework8.exe
+C:\Users\Corsair\OneDrive\Cybersecurity\Statistics\Statistics Homeworks\homeworks\Homework8\code\Homework8\Homework8\obj\Debug\Homework8.pdb

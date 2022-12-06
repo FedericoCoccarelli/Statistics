@@ -8,23 +8,23 @@
     "net6.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\feder\\.nuget\\packages\\": {},
+    "C:\\Users\\Corsair\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\feder\\Desktop\\Statistics\\homeworks\\Homework8\\code\\Homework8.2\\Homework8.2\\Homework8.2.csproj",
+      "projectUniqueName": "C:\\Users\\Corsair\\OneDrive\\Cybersecurity\\Statistics\\Statistics Homeworks\\homeworks\\Homework8\\code\\Homework8.2\\Homework8.2\\Homework8.2.csproj",
       "projectName": "Homework8.2",
-      "projectPath": "C:\\Users\\feder\\Desktop\\Statistics\\homeworks\\Homework8\\code\\Homework8.2\\Homework8.2\\Homework8.2.csproj",
-      "packagesPath": "C:\\Users\\feder\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\feder\\Desktop\\Statistics\\homeworks\\Homework8\\code\\Homework8.2\\Homework8.2\\obj\\",
+      "projectPath": "C:\\Users\\Corsair\\OneDrive\\Cybersecurity\\Statistics\\Statistics Homeworks\\homeworks\\Homework8\\code\\Homework8.2\\Homework8.2\\Homework8.2.csproj",
+      "packagesPath": "C:\\Users\\Corsair\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Corsair\\OneDrive\\Cybersecurity\\Statistics\\Statistics Homeworks\\homeworks\\Homework8\\code\\Homework8.2\\Homework8.2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\feder\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Corsair\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -69,7 +69,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.403\\RuntimeIdentifierGraph.json"
       }
     }
   }
