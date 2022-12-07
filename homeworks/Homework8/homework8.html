@@ -9,7 +9,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="viewport" content="initial-scale=1, maximum-scale=1">
         <!-- site metas -->
-        <title>Federico Coccarelli Homework</title>
+        <title>Federico Coccarelli Homework 8</title>
         <meta name="keywords" content="">
         <meta name="description" content="">
         <meta name="author" content="">
@@ -29,6 +29,15 @@
         <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script> <!-- for equations -->
+        <script type="text/x-mathjax-config"> <!-- for inline equations -->
+         MathJax.Hub.Config({
+           tex2jax: {
+             inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+             processEscapes: true
+           }
+         });
+       </script>
      </head>
 </head>
 
@@ -102,11 +111,13 @@
                <div class="container-fluid" >
                   <div class="carousel-caption" >
                            <div class="text-bg">
-                              <span style="width: 100%;">Homework</span> 
+                              <span style="width: 100%;">Homework 8</span> 
                               <h1>Researches</h1>
-                              <p>
-                               title
-                              </p>
+                              
+                               1) Search on the web about possible derivation of the Normal Distribution.
+                               <br>
+                               2) Search on the web about method to generate normal variate (eg Marsaglia method, etc.)
+                              <br>
                               <a href="#research">Read More </a>
                            </div>
                   </div>
@@ -116,11 +127,11 @@
                <div class="container-fluid">
                   <div class="carousel-caption">
                            <div class="text-bg">
-                              <span>Homework</span>
+                              <span>Homework 8</span>
                               <h1>Application</h1>
-                              <p>
+                              
                                  title
-                              </p>
+                              
                               <a href="#application">Read More </a>
                            </div>
                   </div>
@@ -130,11 +141,11 @@
                <div class="container-fluid">
                   <div class="carousel-caption">
                            <div class="text-bg">
-                              <span>Homework</span>
+                              <span>Homework 8</span>
                               <h1>Research on App</h1>
                               <p style="padding-top: 38px ; padding-bottom: 38px">
                                  title
-                              </p>
+                              
                               <a href="#researchonapp">Read More </a>
                            </div>
                   </div>
@@ -163,10 +174,100 @@
             <div class="row">
                <div class="col-md-12">
                   <div class="titlepage">
-                  <h2>1- title<h2>
+                  <h2>1- Search on the web about possible derivation of the Normal Distribution.<h2>
                   <h3 style="text-align: justify; line-height: 2;">
-                     text
+                     The normal distribution has been introduced by french mathematician Abraham De Moivre. He noticed that the Binomial discrete distribution, for large values of , could be approximated to a continuous distribution, that is the normal distribution. However, this result was obtained almost accidentally by De Moivre itself, and passed unnoticed. De Moivre called this distribution he found “bell-shaped exponential curve”
+
+Later, however, the german mathematician Karl F. Gauss derived and used again this distribution in his work regarding some astronomical observations. Again, the distribution was found as a “collateral effect” of another work and could have passed unnoticed again if the french mathematician Pierre S. Laplace didn’t noticed it.
+
+Laplace published a series of studies proving various interesting properties of the normal distribution and providing a first, non-rigorous proof of the central limit theorem. This theorem was later formalized and proved himself to be one of the most important results in statistics.
+
+Let’s now take a look to the derivations mentioned above.
+                     <br>
+                     <br>
+                     <b>De Moivre drivation</b>
+                     <br>
+                     De Moivre managed to prove that, under specific conditions, a Binomial distribution $Y=Bi(n,p)$ can be approximated to a normal distribution with mean np (the mean of the Binomial) 
+                     and variance npq (the variance of the binomial). Specifically, this is true for n that grows very high.
+                     $${n \choose k}\, p^k q^{n-k} \simeq \frac{1}{\sqrt{2 \pi npq}}\, e^{-\frac{(k-np)^2}{2npq}}, \qquad p+q=1,\ p, q &gt; 0$$
+                     <b>Gauss derivation</b>
+                     <br>
+                     The previous derivation proved that, under some assumptions, a Binomial random variable can be approximated to a Normal random variable $N(\mu,\sigma^2)$, where $\mu=np$ and $\sigma^2=npq$. 
+                     As previously mentioned, this result went unnoticed and, a few years later, Gauss ended up deriving the same distribution with a totally different process.
+                     <br>
+
+                     The formal derivation of the normal distribution made by Gauss will not be reported, since it needs the knowledge of complex topics that were not covered during the lectures. 
+                     Intuitively, Gauss managed to derive the distribution by studying the inference of the mean of an unknown random variable.
+                     <br>
+
+                     In particular, while studying some astronomical phenomena, Gauss calculated a specific random variable for which a certain extimation (specifically, 
+                     the maximum likelihood estimation) of the mean of that random variable, given some samples of it, coincided with the sample mean. It can be proven that the 
+                     only random variable with such a property has the following density function:
+                     <br>
+                     $$f(x) = \frac {\alpha}{\sqrt {2\pi}}e^{-\frac{1}{2}\alpha(x-\mu)^2}$$
+                     This density, for $\alpha = \frac{1}{\sigma}$, is exactly the normal density function.
+                     <br><br>
+                     <b>Central limit theorem</b>
+                     <br>
+                     The final derivation of the normal probability distribution is the so called central limit theorem, that is also one of the most important results of statistics and of probability theory. 
+                     The theorem states that given any sequence of $n$ independent random variables, their sum will converge to a normal random variable for $n$ large enough.
+                     <br>
+
+                     The theorem was first proved by Laplace, that understood the potential of the normal distribution and published many studies about it. However, 
+                     this first proof was not very rigorous, and worked only under some strong assumptions.
+                     <br>
+
+                     A better enunciation (and proof) of the theorem was given by Lindeberg and Levy, that however still assumed that the sequence of random variables was composed by not only independent,
+                      but also identically distributed random variables. Finally, the russian mathematician Aleksandr Lyapunov gave an enunciation and a proof of the theorem only assuming a sequence of 
+                      independent random variables.
+
+
+
+
                   </h3>
+                  <h2>2- Search on the web about method to generate normal variate (eg Marsaglia method, etc.)<h2>
+                     <h3 style="text-align: justify; line-height: 2;">
+                        <b>Box-Muller transform</b>
+                        <br>
+
+The Box-Muller transform is a way to generate two independent normal random variables $X$ and $Y$, using two independent random variables $U_1$ and $U_2$ uniform over (0,1). The way $X$ and $Y$ are computed is the following:
+
+\[{X=R\cos(\Theta )={\sqrt {-2\ln U_{1}}}\cos(2\pi U_{2})}\]
+
+\[{Y=R\sin(\Theta )={\sqrt {-2\ln U_{1}}}\sin(2\pi U_{2})}\]
+
+Both $X$ and $Y$ are computed considering $U_1$ as a radius and $U_2$ as an angle, and operating a transformation from polar to linear coordinates. Notice how multiplying $U_2$ by $2\pi$ is necessary to generate values between $0$ and $2\pi$, while applying the logarithm to $U_1$ guarantees both the generation of values between $0$ and $+\infty$, so that the computed pair $(X,Y)$ can be any point on the cartesian plane.
+
+Notice also that the generated variables follow a normal distribution with mean $0$ and variance $1$. By the way, it’s easy to modify the transform to generate a pair normal distributions with chosen mean and variance:
+
+\[{X=R\cos(\Theta )\sigma + \mu={\sqrt {-2\ln U_{1}}}\cos(2\pi U_{2})\sigma + \mu}\]
+
+\[{Y=R\sin(\Theta )\sigma + \mu={\sqrt {-2\ln U_{1}}}\sin(2\pi U_{2})\sigma + \mu}\]
+
+where $\sigma$ is the chosen mean square error and $\mu$ is the chosen mean.
+
+<b>Marsaglia polar method</b>
+   <br>
+
+Another method that can be used to generate a pair of independent normal random variables is the so called <strong>Marsaglia polar method</strong>. This method uses the same theoretical basis of the Box-Muller method, of which it represents the polar form.
+
+This method uses again two uniform random variables $U_1$ and $U_2$ to generate two normal random variables $X$ and $Y$. Each time we want to sample a couple $(x,y)$ from the couple of normal random variables $(X,Y)$, we sample two values $(u,v)$ respectively from $U_1$ and $U_2$ such that:
+
+\[0 &lt; s = u + v &lt; 1\]
+
+We will then have:
+
+\[x = \sqrt{-2 \ln s} \left(\frac{u}{\sqrt{s}}\right) = u \cdot \sqrt{\frac{-2 \ln s}{s}}\]
+
+\[y = \sqrt{-2 \ln s}\left( \frac{v}{\sqrt{s}}\right) = v \cdot \sqrt{\frac{-2 \ln s}{s}}\]
+
+Again, if we want to choose the mean $\mu$ and the variance $\sigma^2$ of the generated variables:
+
+\[x = \sqrt{-2 \ln s} \left(\frac{u}{\sqrt{s}}\right)\cdot \sigma + \mu = u \cdot \sqrt{\frac{-2 \ln s}{s}}\cdot \sigma + \mu\]
+
+\[y = \sqrt{-2 \ln s}\left( \frac{v}{\sqrt{s}}\right)\cdot \sigma + \mu = v \cdot \sqrt{\frac{-2 \ln s}{s}}\cdot \sigma + \mu\]
+                     </h3>
+                  
                   </div>
                </div>
             </div>

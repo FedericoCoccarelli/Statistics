@@ -121,7 +121,7 @@
                                1) Illustrate the parallels, between the properties of the relative frequency and the axioms for probability <br>
                                2) Discuss some concrete examples of Probability measure Space <br>
                                3) Illustrate how Measure Theory provides the mathematical foundation for Probability Theory
-                              </p>
+                              
                               <a href="#research">Read More </a>
                            </div>
                   </div>
@@ -136,7 +136,7 @@
                               <p style="padding-top: 0px ; padding-bottom: 48px">
                                  1) Generate a m sequences of n trials distributed according a Binomial with success probability p and represent the following quantities: absolute frequency of success, relative frequency of success, "normalized" relative frequency of success. <br>
                                  2) In the same chart, add also a vertical histogram representing the distribution of the above 3 types of frequencies on the last trial.
-                              </p>
+                              
                               <a href="#application">Read More </a>
                            </div>
                   </div>
@@ -151,7 +151,7 @@
                               <p style="padding-top: 0px ; padding-bottom: 48px">
                                  1) Give a simple introduction to graphics in the .NET environment. How to create a bitmap and a chart on it. <br>
                                  2) Explain in simple terms how to get device coordinates from world coordinates
-                              </p>
+                              
                               <a href="#researchonapp">Read More </a>
                            </div>
                   </div>
@@ -259,7 +259,42 @@
                      </h3>
                   <h2>3- Illustrate how Measure Theory provides the mathematical foundation for Probability Theory<h2>
                      <h3 style="text-align: justify; line-height: 2;">
-                        text
+                        In mathematics measure theory is a theory that introduces the concept of measure. This concept is a generalization and formalization of geometrical measures like volume, area, length, but also of other kind of measures, like mass and, how we will see, probability. These seemingly distinct concepts have many similarities and can often be treated together in a single mathematical context.
+                        <br>
+                        The basic object of the measure theory is the measure space. A measure space is a triple $(X,A,\mu)$ where:
+                        <br>
+                        - $X$ is a set.
+                        <br>
+                        -$A$ is a $\sigma$-algebra on the set $X$. A $\sigma$-algebra on a set $X$ is a set of some possible subsets of $X$, closed under the operations of union, complement and intersection. Notice that in order to be a proper $\sigma$-algebra on $X$, $A$ must always contain the empty set and the whole set $X$.
+                        <br>
+                        -$\mu$ is a measure on the so called measurable space $(X,A)$.
+                        <br><br>
+                        The measure $\mu$ associates a value to each possible $E \in A
+                        $ and is a proper measure if it has the following properties:
+                        <br>
+                        1)Non-negativity: for all $E$ in $A$, we have $\mu(E)>0$.
+                        <br>
+                        2)Null empty set: $\mu(\emptyset)=0$
+                        <br>
+                        3) for all countable collections 
+                        of pairwise disjoint sets in $A$, then:
+                        $$\mu \left(\bigcup _{k=1}^{\infty }E_{k}\right)=\sum _{k=1}^{\infty }\mu (E_{k})$$
+                        <br><br>
+                        It’s easy to see that those three properties are the same that, according to the Kolmogorov axioms, belong to the probability (the Null empty set property for probability is easily implied by the three axioms). The only big difference is the Unitarity property, that probability has while measure has not.
+
+We can then say that probability is a measure bound to 1: in other words, probability is a measure that assigns the value 1 to the entire measure space.
+
+Since we defined probability as a measure, we can apply to probability all the results of the measure theory: in this sense, measure theory provides the mathematical foundation of the probability theory.
+
+In fact, while in measure theory we define a measure space, in probability theory we define a probability space that is a triple $(X,A,P)$ where:
+                        <br>
+                        - $X$ is a set.
+                        <br>
+                        -$A$ is a $\sigma$-algebra over X. An element $E \in A$ is called event.
+                        <br>
+                        -$P$  is a probability measure, that follows Kolmogorov axioms. As we said, the difference between a probability measure and the more general notion of measure is that a probability measure must assign value 1 to the entire probability space.
+                        <br><br>
+                        This definition manages to overcome all the problems that belonged to the other probability definitions (the classical definition, the frequentist interpretation, the subjective interpretation, ecc…) providing a strong mathematical base and allowing further developement of probability theory.
                      </h3>
                   </div>
                </div>

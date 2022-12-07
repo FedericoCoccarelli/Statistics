@@ -162,28 +162,52 @@
                   <div class="titlepage">
                   <h2>1- Explain all possible derivation of the arithmetic mean and in general of the other common types of averages.<h2>
                   <h3 style="text-align: justify; line-height: 2;">
-                     Statistics is a field of mathematics that pertains to data analysis. Statistical methods and equations can be applied to a data set in order to analyze and interpret results, explain variations in the data, or predict future data. A few examples of statistical information we can calculate are:
+                     The central tendency is a single number that represents the most common value for a list of numbers.
                      <br>
-                     1)Mean 
+                     There are many ways to calculate the central tendency for a data sample, such as the mean which is calculated from the values, the average is the common term for the mean.
                      <br>
-                     2)Standard deviation of the mean 
+                     Three common types of mean calculations that you may encounter are the arithmetic mean, the geometric mean, and the harmonic mean.
                      <br>
-                     3)Median 
+                     Each mean is appropriate for different types of data:
                      <br>
-                     4)variance
+                     If values have the same units: Use the arithmetic mean.
+                     $$A_n(X)=\frac{1}{n}\sum_{i=1}^{n}X_i$$
                      <br>
-                     5)Mean quadratic error
-                     <br><br>
-                     <b>Mean</b>
+                     If values have differing units: Use the geometric mean.
+                     $$ G_n(X)= \sqrt{n}{\prod_{i=1}^{n}X_i} $$
                      <br>
-                     The mean (also know as average), is obtained by dividing the sum of observed values by the number of observations, n. Although data points fall above, below, or on the mean, it can be considered a good estimate for predicting subsequent data points. The formula for the mean is given below:
-                     $$\bar{X}=\frac{\sum_{i=1}^{i=n} X_{i}}{n}$$
+                     If values are rates: Use the harmonic mean.
+                     $$  H_n(X)=\frac{n}{\sum_{i=1}^{n}\frac{i}{X_i}} $$
+                     <br>
+                     The arithmetic mean $A_n(x)$ is calculated as the sum of the values divided by the total number of values, referred to as N.
+                     <br>
+                     The geometric mean $G_n(x)$ is calculated as the N-th root of the product of all values, where N is the number of values.
+                     <br>
+                     The harmonic mean $H_n(x)$ is calculated as the number of values N divided by the sum of the reciprocal of the values
+                     <br>
+
+
+
                   </h3>
                   </div>
                   <div class="titlepage">
                   <h2>2- Illustrate the difference between "mathematical convergence" and "convergence" in probability.<h2>
                   <h3 style="text-align: justify; line-height: 2;">
-                     text
+                     Convergence in mathematics, is the property of approaching a limit more and more closely as an argument (variable) of the function increases or decreases or as the number of terms of the series increases.
+
+
+For example, the function y = 1/x converges to zero as x increases. Although no finite value of x will cause the value of y to actually become zero, the limiting value of y is zero because y can be made as small as desired by choosing x large enough. The line y = 0 (the x-axis) is called an asymptote of the function.
+
+Given a continuos function f, we say that f(x) converges to the finite limit l for x tends to $x_0$ if for all $\varepsilon >0$ exist ${\displaystyle \delta (\varepsilon )>0}$ such that for all x satisfying ${\displaystyle 0<|x-x_{0}|<\delta (\varepsilon )}$ we have that ${\displaystyle |f(x)-l|<\varepsilon }$. Thus
+                     $$\lim_{x \rightarrow X_0} f(x)=l$$
+                     The basic idea behind the convergence probability, is that the probability of an “unusual” outcome becomes smaller and smaller as the sequence progresses.
+
+The concept of convergence in probability is used very often in statistics. For example, an estimator is called consistent if it converges in probability to the quantity being estimated. Convergence in probability is also the type of convergence established by the weak law of large numbers.
+
+A sequence ${X_n}$ of random variables converges in probability towards the random variable X 
+
+if for all ε > 0
+                     $$\lim_{n \rightarrow \infty}P_r (|X_n - X|> \epsilon)=0$$
                   </h3>
                   </div>
                   <div class="titlepage">
