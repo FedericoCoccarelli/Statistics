@@ -1,0 +1,17 @@
+C:\Users\feder\Desktop\ProgettoTesi\ProgettoTesi\obj\Debug\net6.0-windows\ProgettoTesi.csproj.AssemblyReference.cache
+C:\Users\feder\Desktop\ProgettoTesi\ProgettoTesi\obj\Debug\net6.0-windows\ProgettoTesi.Form1.resources
+C:\Users\feder\Desktop\ProgettoTesi\ProgettoTesi\obj\Debug\net6.0-windows\ProgettoTesi.csproj.GenerateResource.cache
+C:\Users\feder\Desktop\ProgettoTesi\ProgettoTesi\obj\Debug\net6.0-windows\ProgettoTesi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\feder\Desktop\ProgettoTesi\ProgettoTesi\obj\Debug\net6.0-windows\ProgettoTesi.AssemblyInfoInputs.cache
+C:\Users\feder\Desktop\ProgettoTesi\ProgettoTesi\obj\Debug\net6.0-windows\ProgettoTesi.AssemblyInfo.cs
+C:\Users\feder\Desktop\ProgettoTesi\ProgettoTesi\obj\Debug\net6.0-windows\ProgettoTesi.csproj.CoreCompileInputs.cache
+C:\Users\feder\Desktop\ProgettoTesi\ProgettoTesi\bin\Debug\net6.0-windows\ProgettoTesi.exe
+C:\Users\feder\Desktop\ProgettoTesi\ProgettoTesi\bin\Debug\net6.0-windows\ProgettoTesi.deps.json
+C:\Users\feder\Desktop\ProgettoTesi\ProgettoTesi\bin\Debug\net6.0-windows\ProgettoTesi.runtimeconfig.json
+C:\Users\feder\Desktop\ProgettoTesi\ProgettoTesi\bin\Debug\net6.0-windows\ProgettoTesi.dll
+C:\Users\feder\Desktop\ProgettoTesi\ProgettoTesi\bin\Debug\net6.0-windows\ProgettoTesi.pdb
+C:\Users\feder\Desktop\ProgettoTesi\ProgettoTesi\obj\Debug\net6.0-windows\ProgettoTesi.dll
+C:\Users\feder\Desktop\ProgettoTesi\ProgettoTesi\obj\Debug\net6.0-windows\refint\ProgettoTesi.dll
+C:\Users\feder\Desktop\ProgettoTesi\ProgettoTesi\obj\Debug\net6.0-windows\ProgettoTesi.pdb
+C:\Users\feder\Desktop\ProgettoTesi\ProgettoTesi\obj\Debug\net6.0-windows\ProgettoTesi.genruntimeconfig.cache
+C:\Users\feder\Desktop\ProgettoTesi\ProgettoTesi\obj\Debug\net6.0-windows\ref\ProgettoTesi.dll
