@@ -25,3 +25,4 @@ C:\Users\feder\Desktop\Statistics\homeworks\final\Final\Final\obj\Debug\net6.0-w
 C:\Users\feder\Desktop\Statistics\homeworks\final\Final\Final\obj\Debug\net6.0-windows\Final.Form6_1.resources
 C:\Users\feder\Desktop\Statistics\homeworks\final\Final\Final\obj\Debug\net6.0-windows\Final.Form7_1.resources
 C:\Users\feder\Desktop\Statistics\homeworks\final\Final\Final\obj\Debug\net6.0-windows\Final.Form8_1.resources
+C:\Users\feder\Desktop\Statistics\homeworks\final\Final\Final\obj\Debug\net6.0-windows\Final.Form8_2.resources

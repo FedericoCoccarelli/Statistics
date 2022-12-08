@@ -213,5 +213,25 @@ namespace Final
             h8_1.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             h8_1.Show();
         }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            for (int i = Application.OpenForms.Count - 1; i >= 0; i += -1)
+            {
+                if (!object.ReferenceEquals(Application.OpenForms[i], this))
+                {
+                    Application.OpenForms[i].Close();
+                }
+            }
+            Form8_2 h8_2 = new Form8_2();
+            h8_2.StartPosition = FormStartPosition.Manual;
+            h8_2.Location = new Point(0, 50);
+            h8_2.TopLevel = false;
+            h8_2.TopMost = true;
+            this.Controls.Add(h8_2);
+            h8_2.ControlBox = false;
+            h8_2.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            h8_2.Show();
+        }
     }
 }
